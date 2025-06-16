@@ -1,0 +1,16 @@
+/* .left {
+  left: -40px;
+}
+
+.right {
+  right: -40px;
+} */
+.containerList {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+/* .sliderContainer {
+  display: flex;
+  gap: 5px;
+} */

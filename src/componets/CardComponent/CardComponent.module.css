@@ -1,0 +1,66 @@
+.cardCustomer {
+  padding: 20px 15px;
+  width: 100%;
+  width: 350px;
+  max-width: 380px;
+  height: 500px;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+}
+
+.logoContainer {
+  width: 100%;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo {
+  width: 36px;
+  height: 39px;
+  object-fit: contain;
+}
+.containerReview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+.icon {
+  display: block;
+  margin-left: auto;
+}
+.iconcontainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.customer {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+.profileContainer {
+  display: flex;
+  margin-bottom: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.containerReview {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.75;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gray-color);
+}
+.containerText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.75;
+  font-size: 24px;
+  font-weight: 500;
+}
+.name {
+  font-weight: 700px;
+}
