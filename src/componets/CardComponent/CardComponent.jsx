@@ -9,13 +9,14 @@ const CardComponent = ({ card }) => {
       <div className={css.containerReview}>
         <p>{card.review}</p>
       </div>
-      <div className={css.iconcontainer}></div>
-      <img src={card.icon} alt={card.icon} />
+      <div className={css.iconcontainer}>
+        <img className={css.icon} src={card.icon} alt={card.icon} />
+      </div>
       <div className={css.profileContainer}>
         <img src={card.customer} alt={card.customer} width={60} height={60} />
         <div className={css.containerText}>
           <h4 className={css.name}>{card.initials}</h4>
-          <p>{card.company}</p>
+          <p className={css.company}>{card.company}</p>
         </div>
       </div>
     </div>

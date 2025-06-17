@@ -4,18 +4,27 @@
   --gray-color: #b6b1b1;
   --black-color: #000000;
   --white-color: #ffff;
-  --transition: 0.5s ease-in-out;
+  --transition: 0.3s ease-in-out;
   --box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
     10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   --background-color-transition: var(--background-color);
 }
+/* *,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
+  height: 100vh;
   font-style: normal;
   color: var(--black-color);
-  background: var(--white-color);
+  background-image: url('../src/assets/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1,
