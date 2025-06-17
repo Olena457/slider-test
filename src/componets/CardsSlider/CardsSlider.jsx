@@ -1,12 +1,12 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import css from './CardsSlider.module.css';
 import CardComponent from '../CardComponent/CardComponent.jsx';
 import {
   CustomPrevArrow,
   CustomNextArrow,
 } from '../CustomArrow/CustomArrow.jsx';
+import css from './CardsSlider.module.css';
 
 const CardsSlider = ({ cards }) => {
   const settings = {
@@ -16,8 +16,8 @@ const CardsSlider = ({ cards }) => {
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
-    nextArrow: <CustomNextArrow className="slick-next" />,
-    prevArrow: <CustomPrevArrow className="slick-prev" />,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1280,

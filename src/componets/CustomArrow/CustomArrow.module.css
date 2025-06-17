@@ -1,129 +1,81 @@
-/* .arrow {
-  display: none;
-}
-@media (min-width: 768px) {
-  .arrow {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid var(--gray-color);
-    background-color: rgb(62, 54, 12);
-    transition: all var(--transition);
-    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.1);
-  }
-  .arrow:hover {
-    border-color: var(--black-color);
-    transform: translateY(-50%) scale(1.05);
-  }
-}
-
-@media (min-width: 1025px) {
-  .arrow {
-    width: 68px;
-    height: 68px;
-  }
-}
-.slick-slider {
-  position: relative;
-}
-.arrowPrew {
-  left: -5px;
-}
-.arrowNext {
-  right: -5px;
-}
-@media (min-width: 425px) {
-  .arrowPrew {
-    left: -10px;
-  }
-  .arrowNext {
-    right: -10px;
-  }
-}
-@media (min-width: 1280px) {
-  .arrowPrew {
-    left: -68px;
-  }
-  .arrowNext {
-    right: -68px;
-  }
-}
-.arrow.slick-disabled {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
-} */
 .customArrow {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--white-color, #fff);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
+  width: 30px !important;
+  height: 30px !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  border: 1px solid #707070;
-  cursor: pointer;
-  /* position: absolute;
-  z-index: 1001;
-  top: 50%; */
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  border: 1px solid #707070 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  z-index: 10 !important;
+  line-height: 1 !important;
   transform: translateY(-50%);
-  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all var(--transition, 0.3s);
 }
-
 .customArrow:hover {
+  transform: translateY(-50%) scale(1.05);
+  background-color: #e0e0e0 !important;
+}
+
+.customArrow::before {
+  content: '' !important;
+  display: none !important;
   background-color: #f0f0f0;
   transform: translateY(-50%) scale(1.05);
 }
-/* .arrowIcon {
-  position: static;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .arrow-prev {
-  left: -22px;
+  left: -5px;
 }
-.arrow-next {
-  right: -22px;
+.arrow-prev {
+  right: -5px;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) {
   .arrow-prev {
-    left: -44px;
+    left: -22px;
   }
-  .arrow-next {
-    right: -44px;
+  .arrow-prev {
+    right: -22px;
   }
 }
-
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .customArrow {
-    display: none;
+    width: 44px;
+    height: 44px;
+  }
+  .arrow-prev {
+    left: -22px;
+  }
+  .arrow-prev {
+    right: -22px;
   }
 }
-
-.slick-prev:before,
-.slick-next:before {
-  content: '';
-  display: none !important;
+@media (min-width: 1280px) {
+  .arrowIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .customArrow {
+    width: 68px !important;
+    height: 68px !important;
+  }
+  .arrow-prev {
+    left: -68px;
+  }
+  .arrow-prev {
+    right: -68px;
+  }
+}
+.slick-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-  content: '';
-  font-size: 50px !important;
-  opacity: 1 !important;
-}
+/* This is my first experiance whit this library.The most time-consuming part was 
+settings up the 
+arrow sstyles.I know it's not advisable to use '!important' but after various options,only 
+this one  works. "What the client wants, the client gets." */

@@ -1,8 +1,7 @@
-import CardsSlider from './componets/CardsSlider/CardsSlider.jsx';
 import 'modern-normalize';
-import './App.css';
+import CardsSlider from './componets/CardsSlider/CardsSlider.jsx';
 import { cards } from '../src/data/cardsData.js';
-// import ContainerPage from './componets/ContainerPage/ContainerPage.jsx';
+import './App.css';
 
 function App() {
   return (

@@ -9,11 +9,6 @@
     10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   --background-color-transition: var(--background-color);
 }
-/* *,
-*::before,
-*::after {
-  box-sizing: inherit;
-} */
 
 body {
   font-family: 'Space Grotesk', sans-serif;

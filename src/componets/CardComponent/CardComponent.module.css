@@ -5,7 +5,7 @@
   min-width: 320px;
   max-width: 380px;
   min-height: 502px;
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: var(--white-color);
   border: 1px solid var(--gray-color);
   border-radius: 12px;
@@ -28,11 +28,6 @@
     padding: 24px;
   }
 }
-/* @media (min-width: 1280px) {
-  .cardCustomer {
-    padding: 24px;
-  }
-} */
 .logoContainer {
   width: 100%;
   height: 61px;
@@ -57,16 +52,11 @@
     margin-top: 10px;
   }
 }
-/* .logo {
-  width: 36px;
-  height: 39px;
-  object-fit: contain;
-} */
+
 .containerReview {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* justify-content: flex-start; */
   width: 100%;
   min-height: 150px;
   font-size: 16px;
@@ -82,11 +72,7 @@
     font-size: 18px;
   }
 }
-/* @media (min-width: 768px) {
-  .containerReview {
-    font-size: 20px;
-  }
-} */
+
 @media (min-width: 1025px) {
   .containerReview {
     max-width: 338px;
@@ -107,14 +93,7 @@
   width: 16px;
   height: 19px;
 }
-/* @media (min-width: 480px) {
-  .icon {
-    display: block;
-    margin-left: auto;
-    width: 36px;
-    height: 39px;
-  }
-} */
+
 @media (min-width: 768px) {
   .icon {
     width: 19px;
@@ -236,9 +215,11 @@
     font-size: 24px;
     line-height: 1.45;
   }
+}
+@media (min-width: 1280px) {
   .company {
-    line-height: 1.45;
-    font-size: 20px;
+    line-height: 1.2;
+    font-size: 18px;
     font-weight: 500;
   }
 }
