@@ -1,4 +1,9 @@
+/* .slick-dots {
+  bottom: 10px;
+} */
+
 .sliderContainer {
+  position: relative;
   max-width: 1100px;
   margin: 0 auto;
   background-color: rgba(49, 234, 49, 0.2);
@@ -8,7 +13,7 @@
 .cardItem {
   display: flex;
   flex: 0 0 auto;
-  max-width: 380px;
+  max-width: 600px;
 }
 
 @media (min-width: 425px) {

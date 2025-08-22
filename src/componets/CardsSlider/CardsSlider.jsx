@@ -2,10 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import CardComponent from '../CardComponent/CardComponent.jsx';
-import {
-  CustomPrevArrow,
-  CustomNextArrow,
-} from '../CustomArrow/CustomArrow.jsx';
+
 import css from './CardsSlider.module.css';
 
 const CardsSlider = ({ cards }) => {
@@ -16,8 +13,8 @@ const CardsSlider = ({ cards }) => {
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    arrows: true,
+
     responsive: [
       {
         breakpoint: 1280,
@@ -26,6 +23,7 @@ const CardsSlider = ({ cards }) => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+          arrows: true,
         },
       },
       {
@@ -35,6 +33,7 @@ const CardsSlider = ({ cards }) => {
           slidesToScroll: 2.5,
           infinite: true,
           dots: true,
+          arrows: true,
         },
       },
       {
@@ -43,6 +42,7 @@ const CardsSlider = ({ cards }) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
+          arrows: true,
           dots: true,
         },
       },
@@ -52,6 +52,7 @@ const CardsSlider = ({ cards }) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          arrows: false,
         },
       },
       {
@@ -59,6 +60,7 @@ const CardsSlider = ({ cards }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],

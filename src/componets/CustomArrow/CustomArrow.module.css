@@ -1,4 +1,4 @@
-.customArrow {
+/* .customArrow {
   width: 30px !important;
   height: 30px !important;
   display: flex !important;
@@ -74,8 +74,4 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-/* This is my first experiance whit this library.The most time-consuming part was 
-settings up the 
-arrow sstyles.I know it's not advisable to use '!important' but after various options,only 
-this one  works. "What the client wants, the client gets." */
+ */
