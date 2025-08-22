@@ -3,21 +3,23 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import css from  './SectionAccordion';
 
 function SectionAccordion() {
   return (
-    <div>
-      {/* Секція 1 */}
+    <div classname={css.acordion}
+    >
+      {/* 1 */}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Заголовок Секції 1</Typography>
+          <Typography>Заголовок  1</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Текст першої секції акордеона.</Typography>
+          <Typography>Текст 1 секції акордеона.</Typography>
         </AccordionDetails>
       </Accordion>
 
@@ -28,10 +30,10 @@ function SectionAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Заголовок Секції 2</Typography>
+          <Typography>Заголовок  2</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>вміст для другої секції.</Typography>
+          <Typography>вміст 1 секції.</Typography>
         </AccordionDetails>
       </Accordion>
 
@@ -42,10 +44,10 @@ function SectionAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Заголовок Секції 3</Typography>
+          <Typography>Заголовок  3</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Текст секції акордеона.</Typography>
+          <Typography>Текст 3 акордеона.</Typography>
         </AccordionDetails>
       </Accordion>
 
@@ -56,10 +58,10 @@ function SectionAccordion() {
           aria-controls="panel4a-content"
           id="panel4a-header"
         >
-          <Typography>Заголовок Секції 4</Typography>
+          <Typography>Заголовок  4</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Текст інші елементи</Typography>
+          <Typography>Текст 4 елементи</Typography>
         </AccordionDetails>
       </Accordion>
     </div>
