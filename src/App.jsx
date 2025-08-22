@@ -1,16 +1,12 @@
 import 'modern-normalize';
-import CardsSlider from './componets/CardsSlider/CardsSlider.jsx';
-import { cards } from '../src/data/cardsData.js';
+import MainComponent from './componets/MainComponent/MainComponent.jsx';
+// import theme from './theme.js';
 import './App.css';
 
 function App() {
   return (
-    <div className="sliderWrapper">
-      <div className="containerTitle">
-        <h1 className="title">Voices of Success with Sales Fortuna</h1>
-      </div>
-      <CardsSlider cards={cards} />
-    </div>
+    // <ChakraProvider theme={theme}>
+    <MainComponent />
   );
 }
 export default App;
