@@ -3,11 +3,27 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import css from './SectionAccordion';
+// import css from './SectionAccordion';
 
 function SectionAccordion() {
   return (
-    <div classname={css.acordion}>
+    <>
+      <Typography
+        variant="h5"
+        mb={5}
+        component="h2"
+        gutterBottom
+        sx={{
+          fontSize: {
+            xs: '1.5rem',
+            sm: '1.8rem',
+            md: '2.5rem',
+          },
+          textAlign: 'center',
+        }}
+      >
+        "Frequently Asked Questions"
+      </Typography>
       {/* 1 */}
       <Accordion>
         <AccordionSummary
@@ -15,7 +31,7 @@ function SectionAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Заголовок 1</Typography>
+          <Typography mb={4}>Заголовок 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>Текст 1 секції акордеона.</Typography>
@@ -29,7 +45,7 @@ function SectionAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Заголовок 2</Typography>
+          <Typography mb={4}>Заголовок 2</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>вміст 1 секції.</Typography>
@@ -43,7 +59,7 @@ function SectionAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Заголовок 3</Typography>
+          <Typography mb={4}>Заголовок 3</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>Текст 3 акордеона.</Typography>
@@ -57,13 +73,13 @@ function SectionAccordion() {
           aria-controls="panel4a-content"
           id="panel4a-header"
         >
-          <Typography>Заголовок 4</Typography>
+          <Typography mb={4}>Заголовок 4</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>Текст 4 елементи</Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </>
   );
 }
 

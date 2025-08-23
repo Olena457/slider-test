@@ -1,24 +1,28 @@
-import css from './MainComponent.module.css';
 import CardsSlider from '../CardsSlider/CardsSlider.jsx';
 import { cards } from '../../data/cardsData.js';
-
+import css from './WrapperComponent.module.css';
+import FeaturesComponent from '../FeaturesComponent/FeaturesComponent.jsx';
+import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import SectionAccordion from '../SectionAccordion/SectionAccordion.jsx';
-import Footer from '../Footer/Footer.jsx';
 
-const MainComponent = () => {
+const WrapperComponent = () => {
   return (
     <>
-      <div className="container">
-        <div className={css.sliderContainer}>
-          <div className={css.sliderContent}>
-            <div className={css.titleContainer}>
-              <h1 className={css.title}>Don't waste your time and energy.</h1>
+      <div className="section">
+        <div className="container">
+          <div className={css.sliderContainer}>
+            <div className={css.sliderContent}>
+              <div className={css.titleContainer}>
+                <h1 className={css.title}>Don't waste your time and energy.</h1>
+              </div>
+              <CardsSlider cards={cards} />
+              <SectionContainer>
+                <SectionAccordion />
+              </SectionContainer>
+              <SectionContainer>
+                <FeaturesComponent />
+              </SectionContainer>
             </div>
-            <CardsSlider cards={cards} />
-            <div className={css.containerTitle}>
-              <h2 className={css.title}>Frequently Asked Questions</h2>
-            </div>
-            <SectionAccordion />
           </div>
         </div>
       </div>
@@ -26,4 +30,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent;
+export default WrapperComponent;
