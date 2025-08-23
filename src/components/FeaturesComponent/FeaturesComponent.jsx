@@ -6,7 +6,7 @@ import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
 const FeaturesComponent = () => {
   return (
     <SectionContainer>
-      <Box sx={{ flexGrow: 1, p: 2 }}>
+      <Box sx={{ flexGrow: 1, width: '100%' }}>
         <Typography
           variant="h5"
           mb={5}

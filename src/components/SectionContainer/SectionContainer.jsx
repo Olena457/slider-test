@@ -4,6 +4,7 @@ const SectionContainer = ({
   children,
   maxWidth = '1400px',
   py = 5,
+  px = 1,
 
   ...props
 }) => {
@@ -12,7 +13,7 @@ const SectionContainer = ({
       component="section"
       sx={{
         py,
-
+        px,
         mx: 'auto',
         maxWidth,
         width: '100%',
