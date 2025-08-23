@@ -1,8 +1,16 @@
 import 'modern-normalize';
-import MainComponent from './componets/MainComponent/MainComponent.jsx';
+import Header from './components/Header/Header.jsx';
+import WrapperComponent from './components/WrapperComponent/WrapperComponent.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import './App.css';
 
 function App() {
-  return <MainComponent />;
+  return (
+    <>
+      <Header />
+      <WrapperComponent />
+      <Footer />
+    </>
+  );
 }
 export default App;

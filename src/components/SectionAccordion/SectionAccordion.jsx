@@ -3,12 +3,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import css from  './SectionAccordion';
+import css from './SectionAccordion';
 
 function SectionAccordion() {
   return (
-    <div classname={css.acordion}
-    >
+    <div classname={css.acordion}>
       {/* 1 */}
       <Accordion>
         <AccordionSummary
@@ -16,7 +15,7 @@ function SectionAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Заголовок  1</Typography>
+          <Typography>Заголовок 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>Текст 1 секції акордеона.</Typography>
@@ -30,7 +29,7 @@ function SectionAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Заголовок  2</Typography>
+          <Typography>Заголовок 2</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>вміст 1 секції.</Typography>
@@ -44,7 +43,7 @@ function SectionAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Заголовок  3</Typography>
+          <Typography>Заголовок 3</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>Текст 3 акордеона.</Typography>
@@ -58,7 +57,7 @@ function SectionAccordion() {
           aria-controls="panel4a-content"
           id="panel4a-header"
         >
-          <Typography>Заголовок  4</Typography>
+          <Typography>Заголовок 4</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>Текст 4 елементи</Typography>

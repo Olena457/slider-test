@@ -2,7 +2,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import CardComponent from '../CardComponent/CardComponent.jsx';
-
 import css from './CardsSlider.module.css';
 
 const CardsSlider = ({ cards }) => {

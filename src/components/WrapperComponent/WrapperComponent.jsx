@@ -1,14 +1,13 @@
 import css from './MainComponent.module.css';
 import CardsSlider from '../CardsSlider/CardsSlider.jsx';
 import { cards } from '../../data/cardsData.js';
-import Header from '../Header/Header.jsx';
+
 import SectionAccordion from '../SectionAccordion/SectionAccordion.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 const MainComponent = () => {
   return (
     <>
-      <Header />
       <div className="container">
         <div className={css.sliderContainer}>
           <div className={css.sliderContent}>
@@ -23,7 +22,6 @@ const MainComponent = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
