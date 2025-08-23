@@ -2,7 +2,6 @@ import CardsSlider from '../CardsSlider/CardsSlider.jsx';
 import { cards } from '../../data/cardsData.js';
 import css from './WrapperComponent.module.css';
 import FeaturesComponent from '../FeaturesComponent/FeaturesComponent.jsx';
-import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import SectionAccordion from '../SectionAccordion/SectionAccordion.jsx';
 
 const WrapperComponent = () => {
@@ -16,12 +15,10 @@ const WrapperComponent = () => {
                 <h1 className={css.title}>Don't waste your time and energy.</h1>
               </div>
               <CardsSlider cards={cards} />
-              <SectionContainer>
-                <SectionAccordion />
-              </SectionContainer>
-              <SectionContainer>
-                <FeaturesComponent />
-              </SectionContainer>
+
+              <SectionAccordion />
+
+              <FeaturesComponent />
             </div>
           </div>
         </div>

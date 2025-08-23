@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 
-const SectionWrapper = ({
+const SectionContainer = ({
   children,
   maxWidth = '1400px',
   py = 5,
-  px = 2,
+
   ...props
 }) => {
   return (
@@ -12,7 +12,7 @@ const SectionWrapper = ({
       component="section"
       sx={{
         py,
-        px,
+
         mx: 'auto',
         maxWidth,
         width: '100%',
@@ -24,4 +24,4 @@ const SectionWrapper = ({
   );
 };
 
-export default SectionWrapper;
+export default SectionContainer;
