@@ -9,11 +9,17 @@
     10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   --background-color-transition: var(--background-color);
 }
-
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
-  height: 100vh;
+  min-height: 100vh;
   font-style: normal;
   color: var(--black-color);
   background-color: var(--gray-color);

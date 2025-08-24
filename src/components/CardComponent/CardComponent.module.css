@@ -16,7 +16,7 @@
   /* max-width: 90%; */
   max-width: 460px;
   min-height: 502px;
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
   background-color: var(--white-color);
   border: 1px solid var(--gray-color);
   border-radius: 12px;
