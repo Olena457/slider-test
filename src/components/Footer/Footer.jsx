@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   Grid,
   Typography,
   Link,
@@ -8,35 +7,16 @@ import {
   IconButton,
   useTheme,
 } from '@mui/material';
-import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import linkSections from '../../data/linksData.js';
 
 const Footer = () => {
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
-
-  const linkSections = [
-    {
-      title: 'Support',
-      links: ['Pre-Sale FAQS', 'Submit a ticket'],
-    },
-    {
-      title: 'Services',
-      links: ['Theme Tweak'],
-    },
-    {
-      title: 'Showcase',
-      links: ['Widget Kit', 'Support'],
-    },
-    {
-      title: 'Company',
-      links: ['About Us', 'Contact Us', 'Resources'],
-    },
-  ];
 
   return (
     <Box
@@ -52,9 +32,10 @@ const Footer = () => {
         px: { xs: 2, sm: 3, md: 4 },
       }}
     >
-      {/* <Container maxWidth="lg"> */}
       <Grid container spacing={4} alignItems="flex-start">
-        {/* Logo */}
+        {/* ============================ */}
+        {/* logo */}
+        {/* ============================ */}
         <Grid
           size={{ xs: 12, md: 3 }}
           sx={{ textAlign: { xs: 'center', md: 'left' } }}
@@ -71,8 +52,9 @@ const Footer = () => {
             }}
           />
         </Grid>
-
+        {/* ============================ */}
         {/* Links */}
+        {/* ============================ */}
         <Grid size={{ xs: 12, md: 9 }}>
           <Box
             sx={{
@@ -123,8 +105,9 @@ const Footer = () => {
       </Grid>
 
       <Divider sx={{ my: 4 }} />
-
-      {/* Social + Copyright */}
+      {/* ============================ */}
+      {/* Social Media Links */}
+      {/* ============================ */}
       <Box textAlign="center">
         <Box mb={2}>
           {[FacebookIcon, TwitterIcon, InstagramIcon, LinkedInIcon].map(
@@ -139,7 +122,6 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Company Name. All rights reserved.
         </Typography>
       </Box>
-      {/* </Container> */}
     </Box>
   );
 };

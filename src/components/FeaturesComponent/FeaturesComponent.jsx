@@ -1,7 +1,6 @@
 import { features } from '../../data/featuresData.js';
-import SectionContainer from '../SectionContainer/SectionContainer.jsx';
-
 import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
+import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 
 const FeaturesComponent = () => {
   return (
@@ -13,11 +12,6 @@ const FeaturesComponent = () => {
           boxSizing: 'border-box',
           mx: 'auto',
         }}
-        // maxWidth={{ xs: '95%', sm: '95%' }}
-        // sx={{
-        //   flexGrow: 1,
-        //   mx: 'auto',
-        // }}
       >
         <Typography
           variant="h4"

@@ -3,8 +3,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import css from './SectionAccordion';
 import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+// import css from './SectionAccordion';
 
 function SectionAccordion() {
   return (
@@ -26,7 +26,7 @@ function SectionAccordion() {
         >
           "Frequently Asked Questions"
         </Typography>
-        {/* 1 */}
+        {/*Section 1 */}
         <Accordion
           sx={{
             minWidth: { xs: 250 },
@@ -46,7 +46,7 @@ function SectionAccordion() {
           </AccordionDetails>
         </Accordion>
 
-        {/* Секція 2 */}
+        {/* Section 2 */}
         <Accordion
           sx={{
             minWidth: { xs: 250 },
@@ -66,7 +66,7 @@ function SectionAccordion() {
           </AccordionDetails>
         </Accordion>
 
-        {/* Секція 3 */}
+        {/* Section 3 */}
         <Accordion
           sx={{
             minWidth: { xs: 250 },
@@ -86,7 +86,7 @@ function SectionAccordion() {
           </AccordionDetails>
         </Accordion>
 
-        {/* Секція 4 */}
+        {/* Section 4 */}
         <Accordion
           sx={{
             minWidth: { xs: 250 },

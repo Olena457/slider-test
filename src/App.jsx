@@ -7,7 +7,6 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* <div className="wrapper"> */}
       <SectionContainer py={0} maxWidth="100%" mx="auto">
         <Header />
       </SectionContainer>
@@ -15,7 +14,6 @@ function App() {
       <SectionContainer py={0} maxWidth="100%" mx="auto">
         <Footer />
       </SectionContainer>
-      {/* </div> */}
     </>
   );
 }

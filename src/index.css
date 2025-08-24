@@ -9,6 +9,7 @@
     10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   --background-color-transition: var(--background-color);
 }
+
 html,
 body {
   margin: 0;
@@ -16,6 +17,7 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
 body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
@@ -52,6 +54,7 @@ img {
   display: block;
   max-width: 100%;
 }
+
 button {
   border: none;
   background-color: inherit;
@@ -64,7 +67,7 @@ a {
   color: inherit;
 }
 
-.container {
+/* .container {
   max-width: 1560px;
   width: 100%;
   margin-right: auto;
@@ -100,7 +103,6 @@ a {
 .section {
   max-width: 1560px;
   width: 100%;
-  /* margin-inline: auto; */
   margin-top: 40px;
 }
 @media (min-width: 480px) {
@@ -127,4 +129,4 @@ a {
   .section {
     margin-top: 75px;
   }
-}
+} */
