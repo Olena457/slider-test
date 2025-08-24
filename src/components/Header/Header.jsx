@@ -1,12 +1,8 @@
-import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+// import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import css from './Header.module.css';
 
 const Header = () => {
-  return (
-    <SectionContainer>
-      <div className={css.header}>header</div>
-    </SectionContainer>
-  );
+  return <div className={css.header}>header</div>;
 };
 
 export default Header;

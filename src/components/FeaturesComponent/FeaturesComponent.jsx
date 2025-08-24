@@ -5,11 +5,23 @@ import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
 
 const FeaturesComponent = () => {
   return (
-    <SectionContainer>
-      <Box sx={{ flexGrow: 1, width: '100%' }}>
+    <SectionContainer pb={{ xs: 3, sm: 12 }}>
+      <Box
+        sx={{
+          maxWidth: '95%',
+          width: '95%',
+          boxSizing: 'border-box',
+          mx: 'auto',
+        }}
+        // maxWidth={{ xs: '95%', sm: '95%' }}
+        // sx={{
+        //   flexGrow: 1,
+        //   mx: 'auto',
+        // }}
+      >
         <Typography
-          variant="h5"
-          mb={5}
+          variant="h4"
+          mb={6}
           component="h2"
           gutterBottom
           sx={{
@@ -26,8 +38,9 @@ const FeaturesComponent = () => {
 
         <Box
           sx={{
-            minWidth: 250,
-            maxWidth: '100%',
+            boxSizing: 'border-box',
+            width: '90%',
+            // minWidth: '250px',
             overflowWrap: 'break-word',
             display: 'grid',
             gridTemplateColumns: {
@@ -37,6 +50,7 @@ const FeaturesComponent = () => {
             },
             gap: 2,
             mt: 2,
+            mx: 'auto',
           }}
         >
           {features.map((feature, index) => (
@@ -48,8 +62,6 @@ const FeaturesComponent = () => {
                     sx={{
                       transform: {
                         xs: 'scale(1.1)',
-                        sm: 'scale(1.3)',
-                        md: 'scale(1.5)',
                       },
 
                       '& .MuiSvgIcon-root': {

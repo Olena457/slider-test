@@ -59,9 +59,10 @@ a {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1560px;
   width: 100%;
-  margin-inline: auto;
+  margin-right: auto;
+  margin-left: auto;
   padding-inline: 10px;
 }
 @media (min-width: 480px) {
@@ -91,7 +92,7 @@ a {
 }
 
 .section {
-  max-width: 1400px;
+  max-width: 1560px;
   width: 100%;
   /* margin-inline: auto; */
   margin-top: 40px;

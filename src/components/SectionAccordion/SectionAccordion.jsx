@@ -11,8 +11,8 @@ function SectionAccordion() {
     <>
       <SectionContainer>
         <Typography
-          variant="h5"
-          mb={5}
+          variant="h4"
+          mb={6}
           component="h2"
           gutterBottom
           sx={{
@@ -30,7 +30,7 @@ function SectionAccordion() {
         <Accordion
           sx={{
             minWidth: { xs: 250 },
-            maxWidth: { xs: '100%', sm: '95%' },
+            maxWidth: { xs: '95%', sm: '95%' },
             mx: 'auto',
           }}
         >
@@ -50,7 +50,7 @@ function SectionAccordion() {
         <Accordion
           sx={{
             minWidth: { xs: 250 },
-            maxWidth: { xs: '100%', sm: '95%' },
+            maxWidth: { xs: '95%', sm: '95%' },
             mx: 'auto',
           }}
         >
@@ -70,7 +70,7 @@ function SectionAccordion() {
         <Accordion
           sx={{
             minWidth: { xs: 250 },
-            maxWidth: { xs: '100%', sm: '95%' },
+            maxWidth: { xs: '95%', sm: '95%' },
             mx: 'auto',
           }}
         >
@@ -90,7 +90,7 @@ function SectionAccordion() {
         <Accordion
           sx={{
             minWidth: { xs: 250 },
-            maxWidth: { xs: '100%', sm: '95%' },
+            maxWidth: { xs: '95%', sm: '95%' },
             mx: 'auto',
           }}
         >

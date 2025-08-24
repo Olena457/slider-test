@@ -2,9 +2,9 @@ import { Box } from '@mui/material';
 
 const SectionContainer = ({
   children,
-  maxWidth = '1400px',
+  maxWidth = '1560px',
   py = 5,
-  px = 1,
+  px = 2,
 
   ...props
 }) => {
