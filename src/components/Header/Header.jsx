@@ -17,6 +17,7 @@ import {
   Stack,
   Collapse,
 } from '@mui/material';
+
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
@@ -294,7 +295,7 @@ const Header = ({ toggleColorMode }) => {
           </ListItemButton>
           <ListItemButton
             onClick={() => {
-              /* Додати логіку перемикання мови тут */
+              /* switch language logic add here_________________________________________ */
             }}
             sx={{ pl: 2 }}
           >
