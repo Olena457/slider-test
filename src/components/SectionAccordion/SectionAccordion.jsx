@@ -9,7 +9,7 @@ import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 function SectionAccordion() {
   return (
     <>
-      <SectionContainer>
+      <SectionContainer id="questions-section">
         <Typography
           variant="h4"
           mb={6}

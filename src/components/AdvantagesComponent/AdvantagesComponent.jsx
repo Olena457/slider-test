@@ -2,9 +2,9 @@ import { features } from '../../data/featuresData.js';
 import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
 import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 
-const FeaturesComponent = () => {
+const AdvantagesComponent = () => {
   return (
-    <SectionContainer pb={{ xs: 3, sm: 12 }}>
+    <SectionContainer id="options-section" pb={{ xs: 3, sm: 12 }}>
       <Box
         sx={{
           maxWidth: '95%',
@@ -87,4 +87,4 @@ const FeaturesComponent = () => {
   );
 };
 
-export default FeaturesComponent;
+export default AdvantagesComponent;

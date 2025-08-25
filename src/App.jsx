@@ -11,7 +11,7 @@ function App() {
         <Header />
       </SectionContainer>
       <WrapperComponent />
-      <SectionContainer py={0} maxWidth="100%" mx="auto">
+      <SectionContainer id="contacts-section" py={0} maxWidth="100%" mx="auto">
         <Footer />
       </SectionContainer>
     </>

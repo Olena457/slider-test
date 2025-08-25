@@ -37,6 +37,11 @@ import {
   HelpOutlineOutlined as QuestionsIcon,
   RateReviewOutlined as ReviewsIcon,
   ContactsOutlined as ContactsIcon,
+  SettingsOutlined as OptionsIcon,
+  LibraryAddOutlined as LibraryIcon,
+  FavoriteBorderOutlined as LikeIcon,
+  LayersOutlined as SwiperIcon,
+  MiscellaneousServicesOutlined as ServicesIcon,
 } from '@mui/icons-material';
 
 const sections = [
@@ -48,34 +53,51 @@ const sections = [
         description:
           'Get a better understanding of where your traffic is coming from.',
         icon: <AnalyticsIcon />,
+        link: 'https://www.google.com/analytics',
+        isExternal: true,
       },
       {
         title: 'Engagement',
         description:
           'Speak directly to your customers in a more meaningful way.',
         icon: <CampaignIcon />,
+        link: 'https://www.google.com/engagement',
+        isExternal: true,
       },
       {
         title: 'Security',
         description: "Your customers' data will be safe and secure.",
         icon: <SecurityIcon />,
+        link: 'https://www.google.com/security',
+        isExternal: true,
       },
       {
         title: 'Integrations',
         description:
           "Connect with third-party tools that you're already using.",
         icon: <IntegrationsIcon />,
+        link: 'https://www.google.com/integrations',
+        isExternal: true,
       },
       {
         title: 'Automations',
         description:
           'Build strategic funnels that will drive your customers to convert.',
         icon: <AutomationsIcon />,
+        link: 'https://www.google.com/automations',
+        isExternal: true,
       },
     ],
   },
-  { title: 'Blog', link: '#' },
-  { title: 'Pricing', link: '#' },
+  { title: 'Home', link: '#home-section', icon: <HomeIcon /> },
+  { title: 'Questions', link: '#questions-section', icon: <QuestionsIcon /> },
+  { title: 'Reviews', link: '#reviews-section', icon: <ReviewsIcon /> },
+  { title: 'Options', link: '#options-section', icon: <OptionsIcon /> },
+  { title: 'Library', link: '#library-section', icon: <LibraryIcon /> },
+  { title: 'Like', link: '#like-section', icon: <LikeIcon /> },
+  { title: 'Swiper', link: '#swiper-section', icon: <SwiperIcon /> },
+  { title: 'Services', link: '#services-section', icon: <ServicesIcon /> },
+  { title: 'Contacts', link: '#contacts-section', icon: <ContactsIcon /> },
 ];
 
 const Header = ({ toggleColorMode }) => {
@@ -99,6 +121,13 @@ const Header = ({ toggleColorMode }) => {
     setAnchorEl(null);
   };
 
+  const handleScrollToSection = id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const desktopNav = (
     <Box
       sx={{
@@ -106,12 +135,19 @@ const Header = ({ toggleColorMode }) => {
         alignItems: 'center',
       }}
     >
-      <Button
-        color="inherit"
-        sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
-      >
-        Home
-      </Button>
+      {/* Links */}
+      {sections.slice(1).map(section => (
+        <Button
+          key={section.title}
+          color="inherit"
+          sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
+          onClick={() => handleScrollToSection(section.link.substring(1))}
+        >
+          {section.title}
+        </Button>
+      ))}
+
+      {/*  "Features" */}
       <Button
         color="inherit"
         onClick={handleMenuOpen}
@@ -129,8 +165,13 @@ const Header = ({ toggleColorMode }) => {
         <Box sx={{ p: 2 }}>
           <Stack spacing={2} sx={{ minWidth: 250, maxWidth: 400 }}>
             {sections[0].links.map((link, index) => (
-              <Box
+              <ListItemButton
                 key={index}
+                // Тут логіка для перенаправлення на зовнішній ресурс
+                onClick={() => {
+                  window.open(link.link, '_blank');
+                  handleMenuClose();
+                }}
                 sx={{
                   display: 'flex',
                   alignItems: 'flex-start',
@@ -156,7 +197,7 @@ const Header = ({ toggleColorMode }) => {
                     {link.description}
                   </Typography>
                 </Box>
-              </Box>
+              </ListItemButton>
             ))}
             <Box
               sx={{
@@ -186,25 +227,6 @@ const Header = ({ toggleColorMode }) => {
           </Stack>
         </Box>
       </Menu>
-
-      <Button
-        color="inherit"
-        sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
-      >
-        Questions
-      </Button>
-      <Button
-        color="inherit"
-        sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
-      >
-        Reviews
-      </Button>
-      <Button
-        color="inherit"
-        sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
-      >
-        Contacts
-      </Button>
     </Box>
   );
 
@@ -224,69 +246,77 @@ const Header = ({ toggleColorMode }) => {
           <CloseIcon />
         </IconButton>
         <List sx={{ width: '100%' }}>
-          <ListItemButton onClick={handleDrawerToggle} sx={{ pl: 2 }}>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItemButton>
-          <ListItemButton
-            onClick={() => setFeaturesOpen(!featuresOpen)}
-            sx={{ pl: 2 }}
-          >
-            <ListItemIcon>
-              <AnalyticsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Features" />
-            {featuresOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-          </ListItemButton>
-          <Collapse in={featuresOpen} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              {sections[0].links.map((link, index) => (
-                <ListItemButton
-                  key={index}
-                  onClick={handleMenuClose}
-                  sx={{ pl: 4 }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 'auto',
-                      mr: 2,
-                      color: theme.palette.primary.main,
-                    }}
+          {/* Динамічно рендеримо всі пункти меню */}
+          {sections.map(section => {
+            if (section.title === 'Features') {
+              return (
+                <div key={section.title}>
+                  <ListItemButton
+                    onClick={() => setFeaturesOpen(!featuresOpen)}
+                    sx={{ pl: 2 }}
                   >
-                    {link.icon}
-                  </ListItemIcon>
-                  <Box>
-                    <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-                      {link.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {link.description}
-                    </Typography>
-                  </Box>
+                    <ListItemIcon>
+                      <AnalyticsIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Features" />
+                    {featuresOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                  </ListItemButton>
+                  <Collapse in={featuresOpen} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                      {section.links.map((link, index) => (
+                        <ListItemButton
+                          key={index}
+                          // Логіка для зовнішніх посилань
+                          onClick={() => {
+                            window.open(link.link, '_blank');
+                            handleDrawerToggle();
+                          }}
+                          sx={{ pl: 4 }}
+                        >
+                          <ListItemIcon
+                            sx={{
+                              minWidth: 'auto',
+                              mr: 2,
+                              color: theme.palette.primary.main,
+                            }}
+                          >
+                            {link.icon}
+                          </ListItemIcon>
+                          <Box>
+                            <Typography
+                              variant="body1"
+                              sx={{ fontWeight: 'bold' }}
+                            >
+                              {link.title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              {link.description}
+                            </Typography>
+                          </Box>
+                        </ListItemButton>
+                      ))}
+                    </List>
+                  </Collapse>
+                </div>
+              );
+            } else {
+              return (
+                <ListItemButton
+                  key={section.title}
+                  // Логіка для внутрішніх посилань
+                  onClick={() => {
+                    handleScrollToSection(section.link.substring(1));
+                    handleDrawerToggle();
+                  }}
+                  sx={{ pl: 2 }}
+                >
+                  <ListItemIcon>{section.icon}</ListItemIcon>
+                  <ListItemText primary={section.title} />
                 </ListItemButton>
-              ))}
-            </List>
-          </Collapse>
-          <ListItemButton onClick={handleDrawerToggle} sx={{ pl: 2 }}>
-            <ListItemIcon>
-              <QuestionsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Questions" />
-          </ListItemButton>
-          <ListItemButton onClick={handleDrawerToggle} sx={{ pl: 2 }}>
-            <ListItemIcon>
-              <ReviewsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Reviews" />
-          </ListItemButton>
-          <ListItemButton onClick={handleDrawerToggle} sx={{ pl: 2 }}>
-            <ListItemIcon>
-              <ContactsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Contacts" />
-          </ListItemButton>
+              );
+            }
+          })}
+          {/* Інші кнопки: Switch Theme, Language */}
           <ListItemButton onClick={toggleColorMode} sx={{ pl: 2 }}>
             <ListItemIcon>
               {isDark ? <LightModeIcon /> : <DarkModeIcon />}
@@ -331,7 +361,6 @@ const Header = ({ toggleColorMode }) => {
         <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
           Your Logo
         </Typography>
-
         {isMobile ? (
           <Box
             sx={{
