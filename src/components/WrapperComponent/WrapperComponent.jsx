@@ -3,6 +3,7 @@ import CardsSlider from '../CardsSlider/CardsSlider.jsx';
 import AdvantagesComponent from '../AdvantagesComponent/AdvantagesComponent.jsx';
 import SectionAccordion from '../SectionAccordion/SectionAccordion.jsx';
 import SectionContainer from '../SectionContainer/SectionContainer';
+import LibraryList from '../LibraryList/LibraryList.jsx';
 import css from './WrapperComponent.module.css';
 
 const WrapperComponent = () => {
@@ -18,9 +19,9 @@ const WrapperComponent = () => {
           </div>
         </div>
       </SectionContainer>
-
       <SectionAccordion />
       <AdvantagesComponent />
+      <LibraryList />
     </>
   );
 };
