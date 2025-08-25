@@ -5,6 +5,7 @@ import SectionAccordion from '../SectionAccordion/SectionAccordion.jsx';
 import SectionContainer from '../SectionContainer/SectionContainer';
 import LibraryList from '../LibraryList/LibraryList.jsx';
 import css from './WrapperComponent.module.css';
+import TeachComponents from '../TeachComponents/TeachComponents.jsx';
 
 const WrapperComponent = () => {
   return (
@@ -22,6 +23,7 @@ const WrapperComponent = () => {
       <SectionAccordion />
       <AdvantagesComponent />
       <LibraryList />
+      <TeachComponents />
     </>
   );
 };
