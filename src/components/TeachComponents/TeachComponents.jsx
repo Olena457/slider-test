@@ -26,24 +26,28 @@ const TeachComponents = () => {
             <Box
               key={item.id}
               sx={{
-                display: 'inline-block',
-                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
                 minWidth: { xs: 60, sm: 80, md: 100 },
               }}
             >
-              <Box
-                component="img"
-                src={item.logo}
-                alt={item.name}
-                sx={{
-                  width: { xs: 40, sm: 60, md: 80 },
-                  height: 'auto',
-                  transition: 'transform 0.3s',
-                  '&:hover': {
-                    transform: 'scale(1.1)',
-                  },
-                }}
-              />
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <Box
+                  component="img"
+                  src={item.logo}
+                  alt={item.name}
+                  sx={{
+                    width: { xs: 40, sm: 60, md: 80 },
+                    height: 'auto',
+                    transition: 'transform 0.3s',
+                    '&:hover': {
+                      transform: 'scale(1.1)',
+                    },
+                  }}
+                />
+              </a>
               <Typography
                 variant="caption"
                 display="block"

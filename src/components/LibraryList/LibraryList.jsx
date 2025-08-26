@@ -7,6 +7,7 @@ import {
   Modal,
   IconButton,
 } from '@mui/material';
+
 import CloseIcon from '@mui/icons-material/Close';
 import LibraryCard from '../LibraryCard/LibraryCard';
 import libraryData from '../../data/Library.js';
@@ -42,13 +43,17 @@ const LibraryList = () => {
     <div id="library-section">
       <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
         <Typography
-          variant="h3"
+          variant="h4"
+          mb={6}
           component="h2"
+          gutterBottom
           sx={{
+            fontSize: {
+              xs: '1.5rem',
+              sm: '1.8rem',
+              md: '2.5rem',
+            },
             textAlign: 'center',
-            mb: { xs: 3, md: 5, lg: 6 },
-            fontWeight: 'bold',
-            color: '#343a40',
           }}
         >
           Meet Our Library
