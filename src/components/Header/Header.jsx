@@ -17,12 +17,11 @@ import {
   Stack,
   Collapse,
 } from '@mui/material';
+import transparent from '../../assets/images/transparent.png';
 
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
-  Brightness4 as DarkModeIcon,
-  Brightness7 as LightModeIcon,
   ExpandMore as ExpandMoreIcon,
   ExpandLess as ExpandLessIcon,
   AnalyticsOutlined as AnalyticsIcon,
@@ -47,67 +46,101 @@ import {
 const sections = [
   {
     title: 'Features',
-    links: [
+    references: [
       {
+        id: 1,
         title: 'Analytics',
         description:
           'Get a better understanding of where your traffic is coming from.',
         icon: <AnalyticsIcon />,
-        link: 'https://www.google.com/analytics',
+        reference: 'https://www.google.com/analytics',
         isExternal: true,
       },
       {
+        id: 2,
         title: 'Engagement',
         description:
           'Speak directly to your customers in a more meaningful way.',
         icon: <CampaignIcon />,
-        link: 'https://www.google.com/engagement',
+        reference: 'https://www.google.com/engagement',
         isExternal: true,
       },
       {
+        id: 3,
         title: 'Security',
         description: "Your customers' data will be safe and secure.",
         icon: <SecurityIcon />,
-        link: 'https://www.google.com/security',
+        reference: 'https://www.google.com/security',
         isExternal: true,
       },
       {
+        id: 4,
         title: 'Integrations',
         description:
-          "Connect with third-party tools that you're already using.",
+          'A modern color generation system with seamless HTML integration.',
         icon: <IntegrationsIcon />,
-        link: 'https://www.google.com/integrations',
+        reference: 'https://www.learnui.design/tools/gradient-generator.html',
         isExternal: true,
       },
       {
-        title: 'Automations',
+        id: 5,
+        title: 'Animations',
         description:
-          'Build strategic funnels that will drive your customers to convert.',
+          'Refined motion and delicate animations breathe life into the interface.',
         icon: <AutomationsIcon />,
-        link: 'https://www.google.com/automations',
+        reference: 'https://animejs.com/',
         isExternal: true,
       },
     ],
   },
-  { title: 'Home', link: '#home-section', icon: <HomeIcon /> },
-  { title: 'Questions', link: '#questions-section', icon: <QuestionsIcon /> },
-  { title: 'Reviews', link: '#reviews-section', icon: <ReviewsIcon /> },
-  { title: 'Options', link: '#options-section', icon: <OptionsIcon /> },
-  { title: 'Library', link: '#library-section', icon: <LibraryIcon /> },
-  { title: 'Like', link: '#like-section', icon: <LikeIcon /> },
-  { title: 'Swiper', link: '#swiper-section', icon: <SwiperIcon /> },
-  { title: 'Services', link: '#services-section', icon: <ServicesIcon /> },
-  { title: 'Contacts', link: '#contacts-section', icon: <ContactsIcon /> },
+  { id: 211, title: 'Home', link: '#home-section', icon: <HomeIcon /> },
+  {
+    id: 212,
+    title: 'Questions',
+    link: '#questions-section',
+    icon: <QuestionsIcon />,
+  },
+  {
+    id: 213,
+    title: 'Reviews',
+    link: '#reviews-section',
+    icon: <ReviewsIcon />,
+  },
+  {
+    id: 214,
+    title: 'Options',
+    link: '#options-section',
+    icon: <OptionsIcon />,
+  },
+  {
+    id: 215,
+    title: 'Library',
+    link: '#library-section',
+    icon: <LibraryIcon />,
+  },
+  { id: 216, title: 'Like', link: '#like-section', icon: <LikeIcon /> },
+  { id: 217, title: 'Swiper', link: '#swiper-section', icon: <SwiperIcon /> },
+  {
+    id: 218,
+    title: 'Services',
+    link: '#services-section',
+    icon: <ServicesIcon />,
+  },
+  {
+    id: 19,
+    title: 'Contacts',
+    link: '#contacts-section',
+    icon: <ContactsIcon />,
+  },
 ];
 
-const Header = ({ toggleColorMode }) => {
+const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isDark = theme.palette.mode === 'dark';
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [featuresOpen, setFeaturesOpen] = useState(false);
+  const [featuresOpen, setFeaturesOpen] = useState(false); // Новий стан для мобільного меню
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -124,7 +157,12 @@ const Header = ({ toggleColorMode }) => {
   const handleScrollToSection = id => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (isMobile) {
+        handleDrawerToggle();
+      }
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
     }
   };
 
@@ -135,24 +173,56 @@ const Header = ({ toggleColorMode }) => {
         alignItems: 'center',
       }}
     >
-      {/* Links */}
-      {sections.slice(1).map(section => (
-        <Button
-          key={section.title}
-          color="inherit"
-          sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
-          onClick={() => handleScrollToSection(section.link.substring(1))}
-        >
-          {section.title}
-        </Button>
-      ))}
+      {/* Links header */}
+      {sections
+        .filter(section => section.title !== 'Features')
+        .map(section => (
+          <Button
+            fontSize={{
+              md: '2rem',
+              lg: '2.2rem',
+              xl: '3.5rem',
+            }}
+            key={section.id}
+            color="inherit"
+            sx={{
+              borderRadius: '12px',
+              textTransform: 'none',
+              color: theme.palette.primary.main,
+              transition: '0.3s',
+              '&:hover': {
+                color: theme.palette.background.default,
+                background: theme.gradients.headerFooter,
+              },
+              '&:focus': {
+                color: theme.palette.background.default,
+                background: theme.gradients.headerFooter,
+              },
+            }}
+            onClick={() => handleScrollToSection(section.link.substring(1))}
+          >
+            {section.title}
+          </Button>
+        ))}
 
-      {/*  "Features" */}
+      {/* "Features" */}
       <Button
-        color="inherit"
         onClick={handleMenuOpen}
         endIcon={<ExpandMoreIcon />}
-        sx={{ textTransform: 'none', color: theme.palette.text.secondary }}
+        sx={{
+          textTransform: 'none',
+          color: theme.palette.primary.main,
+          borderRadius: '12px',
+          transition: '0.3s',
+          '&:hover': {
+            color: theme.palette.background.default,
+            background: theme.gradients.headerFooter,
+          },
+          '&:focus': {
+            color: theme.palette.background.default,
+            background: theme.gradients.headerFooter,
+          },
+        }}
       >
         Features
       </Button>
@@ -163,20 +233,25 @@ const Header = ({ toggleColorMode }) => {
         aria-labelledby="features-button"
       >
         <Box sx={{ p: 2 }}>
-          <Stack spacing={2} sx={{ minWidth: 250, maxWidth: 400 }}>
-            {sections[0].links.map((link, index) => (
+          <Stack
+            spacing={2}
+            sx={{
+              minWidth: 250,
+              maxWidth: 400,
+            }}
+          >
+            {sections[0].references.map(item => (
               <ListItemButton
-                key={index}
-                // Тут логіка для перенаправлення на зовнішній ресурс
+                key={item.id}
                 onClick={() => {
-                  window.open(link.link, '_blank');
+                  window.open(item.reference, '_blank');
                   handleMenuClose();
                 }}
                 sx={{
                   display: 'flex',
                   alignItems: 'flex-start',
                   p: 1,
-                  borderRadius: 1,
+                  borderRadius: 6,
                   '&:hover': { backgroundColor: theme.palette.action.hover },
                 }}
               >
@@ -187,14 +262,14 @@ const Header = ({ toggleColorMode }) => {
                     color: theme.palette.primary.main,
                   }}
                 >
-                  {link.icon}
+                  {item.icon}
                 </ListItemIcon>
                 <Box>
                   <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-                    {link.title}
+                    {item.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {link.description}
+                    {item.description}
                   </Typography>
                 </Box>
               </ListItemButton>
@@ -234,100 +309,174 @@ const Header = ({ toggleColorMode }) => {
     <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
       <Box
         sx={{
+          background: theme.gradients.headerFooter,
+          color: theme.palette.primary.main,
           width: 250,
+          height: '100%',
           p: 2,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
+          overflowY: 'auto',
         }}
         role="presentation"
       >
-        <IconButton onClick={handleDrawerToggle} sx={{ mb: 2 }}>
+        <IconButton
+          onClick={handleDrawerToggle}
+          sx={{ mb: 2, color: theme.palette.primary.main }}
+        >
           <CloseIcon />
         </IconButton>
         <List sx={{ width: '100%' }}>
-          {/* Динамічно рендеримо всі пункти меню */}
-          {sections.map(section => {
-            if (section.title === 'Features') {
-              return (
-                <div key={section.title}>
-                  <ListItemButton
-                    onClick={() => setFeaturesOpen(!featuresOpen)}
-                    sx={{ pl: 2 }}
-                  >
-                    <ListItemIcon>
-                      <AnalyticsIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Features" />
-                    {featuresOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                  </ListItemButton>
-                  <Collapse in={featuresOpen} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                      {section.links.map((link, index) => (
-                        <ListItemButton
-                          key={index}
-                          // Логіка для зовнішніх посилань
-                          onClick={() => {
-                            window.open(link.link, '_blank');
-                            handleDrawerToggle();
-                          }}
-                          sx={{ pl: 4 }}
-                        >
-                          <ListItemIcon
-                            sx={{
-                              minWidth: 'auto',
-                              mr: 2,
-                              color: theme.palette.primary.main,
-                            }}
-                          >
-                            {link.icon}
-                          </ListItemIcon>
-                          <Box>
-                            <Typography
-                              variant="body1"
-                              sx={{ fontWeight: 'bold' }}
-                            >
-                              {link.title}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              {link.description}
-                            </Typography>
-                          </Box>
-                        </ListItemButton>
-                      ))}
-                    </List>
-                  </Collapse>
-                </div>
-              );
-            } else {
-              return (
+          {/* Mobile menu items with Features dropdown */}
+          <ListItemButton
+            onClick={() => setFeaturesOpen(!featuresOpen)}
+            sx={{
+              pl: 2,
+              transition: '0.3s',
+              '&:hover, &:focus': {
+                backgroundColor: theme.palette.action.hover,
+              },
+              '& .MuiListItemText-primary': {
+                transition: '0.3s',
+              },
+              '&:hover .MuiListItemText-primary, &:focus .MuiListItemText-primary':
+                {
+                  color: theme.palette.primary.main,
+                },
+              '& .MuiListItemIcon-root': {
+                transition: '0.3s',
+              },
+              '&:hover .MuiListItemIcon-root, &:focus .MuiListItemIcon-root': {
+                color: theme.palette.primary.main,
+              },
+            }}
+          >
+            <ListItemIcon>
+              <AnalyticsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Features" />
+            {featuresOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </ListItemButton>
+          <Collapse in={featuresOpen} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {sections[0].references.map(item => (
                 <ListItemButton
-                  key={section.title}
-                  // Логіка для внутрішніх посилань
+                  key={item.id}
                   onClick={() => {
-                    handleScrollToSection(section.link.substring(1));
+                    window.open(item.reference, '_blank');
                     handleDrawerToggle();
                   }}
-                  sx={{ pl: 2 }}
+                  sx={{
+                    pl: 4,
+                    transition: '0.3s',
+                    '&:hover, &:focus': {
+                      backgroundColor: theme.palette.action.hover,
+                    },
+                    '& .MuiListItemText-primary': {
+                      transition: '0.3s',
+                    },
+                    '&:hover .MuiListItemText-primary, &:focus .MuiListItemText-primary':
+                      {
+                        color: theme.palette.primary.main,
+                      },
+                    '& .MuiListItemIcon-root': {
+                      transition: '0.3s',
+                    },
+                    '&:hover .MuiListItemIcon-root, &:focus .MuiListItemIcon-root':
+                      {
+                        color: theme.palette.primary.main,
+                      },
+                  }}
                 >
-                  <ListItemIcon>{section.icon}</ListItemIcon>
-                  <ListItemText primary={section.title} />
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 'auto',
+                      mr: 2,
+                      color: theme.palette.primary.main,
+                    }}
+                  >
+                    {item.icon}
+                  </ListItemIcon>
+                  <Box>
+                    <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
+                      {item.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {item.description}
+                    </Typography>
+                  </Box>
                 </ListItemButton>
-              );
-            }
-          })}
-          {/* Інші кнопки: Switch Theme, Language */}
-          <ListItemButton onClick={toggleColorMode} sx={{ pl: 2 }}>
-            <ListItemIcon>
-              {isDark ? <LightModeIcon /> : <DarkModeIcon />}
-            </ListItemIcon>
-            <ListItemText primary="Switch Theme" />
-          </ListItemButton>
+              ))}
+            </List>
+          </Collapse>
+
+          {/* Other menu items */}
+          {sections
+            .filter(section => section.title !== 'Features')
+            .map(section => {
+              if (section.link) {
+                return (
+                  <ListItemButton
+                    key={section.title}
+                    onClick={() => {
+                      handleScrollToSection(section.link.substring(1));
+                    }}
+                    sx={{
+                      pl: 2,
+                      transition: '0.3s',
+                      '&:hover, &:focus': {
+                        backgroundColor: theme.palette.action.hover,
+                      },
+                      '& .MuiListItemText-primary': {
+                        transition: '0.3s',
+                      },
+                      '&:hover .MuiListItemText-primary, &:focus .MuiListItemText-primary':
+                        {
+                          color: theme.palette.primary.main,
+                        },
+                      '& .MuiListItemIcon-root': {
+                        transition: '0.3s',
+                      },
+                      '&:hover .MuiListItemIcon-root, &:focus .MuiListItemIcon-root':
+                        {
+                          color: theme.palette.primary.main,
+                        },
+                    }}
+                  >
+                    <ListItemIcon>{section.icon}</ListItemIcon>
+                    <ListItemText primary={section.title} />
+                  </ListItemButton>
+                );
+              }
+              return null;
+            })}
           <ListItemButton
             onClick={() => {
               /* switch language logic add here_________________________________________ */
             }}
-            sx={{ pl: 2 }}
+            sx={{
+              color: theme.palette.primary.main,
+              transition: '0.3s',
+              pl: 2,
+              '&:hover, &:focus': {
+                color: theme.palette.background.default,
+                background: theme.gradients.headerFooter,
+              },
+              '& .MuiListItemText-primary': {
+                transition: '0.3s',
+              },
+              '&:hover .MuiListItemText-primary, &:focus .MuiListItemText-primary':
+                {
+                  color: theme.palette.primary.main,
+                },
+              '& .MuiListItemIcon-root': {
+                transition: '0.3s',
+              },
+              '&:hover .MuiListItemIcon-root, &:focus .MuiListItemIcon-root': {
+                color: theme.palette.primary.main,
+              },
+            }}
           >
             <ListItemIcon>
               <LanguageIcon />
@@ -343,7 +492,7 @@ const Header = ({ toggleColorMode }) => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: theme.palette.background.default,
+        background: theme.gradients.headerFooter,
         color: theme.palette.text.primary,
         boxShadow: 'sm',
         borderTop: `6px solid ${theme.palette.primary.main}`,
@@ -358,9 +507,42 @@ const Header = ({ toggleColorMode }) => {
           px: 2,
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-          Your Logo
-        </Typography>
+        <Box
+          sx={{ position: 'relative', display: 'flex', alignItems: 'center' }}
+        >
+          <Box
+            component="img"
+            src={transparent}
+            alt="Logo"
+            sx={{
+              width: { xs: 80, md: 120 },
+              height: { xs: 80, md: 120 },
+              borderRadius: 2,
+            }}
+          />
+          <Typography
+            fontSize={{ xs: '1rem', md: '1.5rem' }}
+            sx={{
+              fontWeight: 'bold',
+              lineHeight: 1,
+              color: 'background.default',
+              position: 'absolute',
+              top: '50%',
+              left: '5%',
+              transform: 'translate(-50%, -50%)',
+              textTransform: 'uppercase',
+              whiteSpace: 'nowrap',
+              '&:hover, &:focus': {
+                color: theme.palette.primary.main,
+                textDecoration: 'none',
+                cursor: 'pointer',
+              },
+            }}
+          >
+            AIDE
+          </Typography>
+        </Box>
+
         {isMobile ? (
           <Box
             sx={{
@@ -387,21 +569,13 @@ const Header = ({ toggleColorMode }) => {
             }}
           >
             {desktopNav}
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <IconButton
-                edge="end"
-                onClick={toggleColorMode}
-                color="inherit"
-                sx={{ ml: 1 }}
-              >
-                {isDark ? <LightModeIcon /> : <DarkModeIcon />}
-              </IconButton>
+            <Box sx={{ display: 'flex', marginRight: 3, alignItems: 'center' }}>
               <IconButton
                 edge="end"
                 onClick={() => {
                   /* add language switching logic here___________________________ */
                 }}
-                color="inherit"
+                color="white"
               >
                 <LanguageIcon />
               </IconButton>

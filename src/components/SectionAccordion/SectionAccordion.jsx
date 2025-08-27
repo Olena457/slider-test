@@ -4,7 +4,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SectionContainer from '../SectionContainer/SectionContainer.jsx';
-// import css from './SectionAccordion';
 
 function SectionAccordion() {
   return (
