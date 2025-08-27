@@ -4,8 +4,8 @@ const linkSections = [
     text: [
       '22 Khreshchatyk Street, Kyiv, Ukraine',
       'contact@aide.com',
-      'tel:+380931234567',
-      '+38 (093) 123 45 67',
+      'tel: +380931234567',
+      'mob: +38 (093) 123 45 67',
     ],
     links: [
       'https://www.google.com/maps?q=Khreshchatyk+Street,+22,+Kyiv,+Ukraine',

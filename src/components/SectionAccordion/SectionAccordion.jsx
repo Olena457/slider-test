@@ -50,6 +50,18 @@ function SectionAccordion() {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              sx={{
+                minHeight: '64px',
+                '&.Mui-expanded': {
+                  minHeight: '64px',
+                },
+                '@media (min-width: 768px)': {
+                  minHeight: '80px',
+                  '&.Mui-expanded': {
+                    minHeight: '80px',
+                  },
+                },
+              }}
             >
               <Typography sx={{ width: '100%', textAlign: 'center' }}>
                 Заголовок 1
@@ -72,6 +84,18 @@ function SectionAccordion() {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"
               id="panel2a-header"
+              sx={{
+                minHeight: '64px',
+                '&.Mui-expanded': {
+                  minHeight: '64px',
+                },
+                '@media (min-width: 768px)': {
+                  minHeight: '80px',
+                  '&.Mui-expanded': {
+                    minHeight: '80px',
+                  },
+                },
+              }}
             >
               <Typography sx={{ width: '100%', textAlign: 'center' }}>
                 Заголовок 2
@@ -94,6 +118,18 @@ function SectionAccordion() {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel3a-content"
               id="panel3a-header"
+              sx={{
+                minHeight: '64px',
+                '&.Mui-expanded': {
+                  minHeight: '64px',
+                },
+                '@media (min-width: 768px)': {
+                  minHeight: '80px',
+                  '&.Mui-expanded': {
+                    minHeight: '80px',
+                  },
+                },
+              }}
             >
               <Typography sx={{ width: '100%', textAlign: 'center' }}>
                 Заголовок 3
@@ -116,6 +152,18 @@ function SectionAccordion() {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4a-content"
               id="panel4a-header"
+              sx={{
+                minHeight: '64px',
+                '&.Mui-expanded': {
+                  minHeight: '64px',
+                },
+                '@media (min-width: 768px)': {
+                  minHeight: '80px',
+                  '&.Mui-expanded': {
+                    minHeight: '80px',
+                  },
+                },
+              }}
             >
               <Typography sx={{ width: '100%', textAlign: 'center' }}>
                 Заголовок 4

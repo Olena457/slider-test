@@ -7,6 +7,7 @@ import SectionContainer from '../SectionContainer/SectionContainer';
 import LibraryList from '../LibraryList/LibraryList.jsx';
 import css from './WrapperComponent.module.css';
 import TeachComponents from '../TeachComponents/TeachComponents.jsx';
+import ToolsComponet from '../ToolsComponent/ToolsComponent.jsx';
 
 const WrapperComponent = () => {
   return (
@@ -40,8 +41,9 @@ const WrapperComponent = () => {
         </div>
       </SectionContainer>
       <SectionAccordion />
-      <AdvantagesComponent />
       <LibraryList />
+      <AdvantagesComponent />
+      <ToolsComponet />
     </>
   );
 };

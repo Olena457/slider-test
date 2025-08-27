@@ -10,7 +10,7 @@ export const cards = [
   {
     logo: LogoOne,
     review:
-      'Sales Fortuna made managing sales easier and helped us focus on customers. Its tools have been crucial for our growth and client satisfaction.',
+      'Sales Fortuna made managing sales easier and helped us focus on customers. Its tools have been crucial for growth and client satisfaction.',
     icon: Icon,
     customer: 'https://ftp.goit.study/img/avatars/15.jpg',
     initials: 'Erman Morgan ',
@@ -19,7 +19,7 @@ export const cards = [
   {
     logo: LogoTwo,
     review:
-      'Sales Fortuna has made sales so much easier for us. It saves time, simplifies the whole process, and helps us land more deals without extra hassle.',
+      'Sales Fortuna has made sales so much easier for us. It saves time, simplifies the whole process, and helps us land more deals.',
     icon: Icon,
     customer: 'https://ftp.goit.study/img/avatars/30.jpg',
     initials: 'Maria Hayes',
@@ -29,7 +29,7 @@ export const cards = [
   {
     logo: LogoOne,
     review:
-      'Sales Fortuna made managing sales easier and helped us focus on customers. Its tools have been crucial for our growth and client satisfaction.',
+      'Sales Fortuna made managing sales easier and helped customers. Its tools have been crucial for client satisfaction.',
     icon: Icon,
     customer: 'https://ftp.goit.study/img/avatars/25.jpg',
     initials: 'Emma Moris',
@@ -38,7 +38,7 @@ export const cards = [
   {
     logo: LogoTwo,
     review:
-      'Sales Fortuna has made sales so much easier for us. It saves time, simplifies the whole process, and helps us land more deals without extra hassle.',
+      'Sales Fortuna has made sales so much easier for us. It saves time, simplifies the whole process, and helps us land more deals.',
     icon: Icon,
     customer: 'https://ftp.goit.study/img/avatars/13.jpg',
     initials: 'Garry Hayes',
@@ -47,7 +47,7 @@ export const cards = [
   {
     logo: LogoTwo,
     review:
-      'Sales Fortuna has made sales so much easier for us. It saves time, simplifies the whole process, and helps us land more deals without extra hassle.',
+      'Sales Fortuna has made sales so much easier for us. It saves time, simplifies the whole process, and helps us land more deals.',
     icon: Icon,
     customer: profileTwo,
     initials: 'Olivia Hayes',
@@ -65,7 +65,7 @@ export const cards = [
   {
     logo: LogoOne,
     review:
-      'Sales Fortuna made managing sales easier and helped us focus on customers. Its tools have been crucial for our growth and client satisfaction.',
+      'Sales Fortuna made managing sales easier and helped us focus on customers. Its tools have been crucial for client satisfaction.',
     icon: Icon,
     customer: profile,
     initials: 'Ethan Morgan ',

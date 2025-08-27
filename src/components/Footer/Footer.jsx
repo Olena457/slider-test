@@ -17,6 +17,12 @@ import transparent from '../../assets/images/transparent.png';
 
 const Footer = () => {
   const theme = useTheme();
+  const socialLinks = [
+    { icon: FacebookIcon, url: 'https://www.facebook.com/your-page' },
+    { icon: TwitterIcon, url: 'https://twitter.com/your-account' },
+    { icon: InstagramIcon, url: 'https://www.instagram.com/your-account' },
+    { icon: LinkedInIcon, url: 'https://www.linkedin.com/in/your-profile' },
+  ];
 
   return (
     <div id="contacts-section">
@@ -76,7 +82,6 @@ const Footer = () => {
                     sm: '43%',
                     md: '12%',
                     lg: '27%',
-                    xl: '3%',
                   },
                   transform: 'translate(-50%, -50%)',
                   textTransform: 'uppercase',
@@ -177,30 +182,38 @@ const Footer = () => {
         {/* ============================ */}
         <Box textAlign="center">
           <Box mb={2}>
-            {[FacebookIcon, TwitterIcon, InstagramIcon, LinkedInIcon].map(
-              (Icon, i) => (
+            {/* Оновлений блок, який використовує масив socialLinks для динамічного створення посилань */}
+            {socialLinks.map((social, i) => (
+              <Link
+                key={i}
+                href={social.url}
+                target="_blank"
+                rel="noopener"
+                sx={{
+                  color: 'inherit',
+                  '&:hover, &:focus': {
+                    color: 'white',
+                    textDecoration: 'underline',
+                  },
+                }}
+              >
                 <IconButton
-                  key={i}
                   sx={{
                     fontSize: '2rem',
                     mx: 1,
-                    color: theme.palette.text.secondary,
+                    color: 'text.secondary',
                     '&:hover, &:focus': {
-                      color: theme.palette.background.default,
-                      textDecoration: 'underline',
+                      color: 'white',
                       cursor: 'pointer',
                     },
                   }}
                 >
-                  <Icon fontSize="inherit" />
+                  <social.icon fontSize="inherit" />
                 </IconButton>
-              )
-            )}
+              </Link>
+            ))}
           </Box>
-          <Typography
-            variant="caption"
-            sx={{ color: theme.palette.text.primary }}
-          >
+          <Typography variant="caption" sx={{ color: 'text.primary' }}>
             © {new Date().getFullYear()} Company AIDE. All rights reserved.
           </Typography>
         </Box>

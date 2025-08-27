@@ -8,7 +8,8 @@ const CardsSlider = ({ cards }) => {
   const settings = {
     dots: true,
     infinite: false,
-    speed: 500,
+    speed: 2000,
+    easing: 'ease-in-out',
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,

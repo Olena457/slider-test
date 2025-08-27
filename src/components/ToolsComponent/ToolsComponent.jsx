@@ -1,0 +1,234 @@
+import cardData from '../../data/sliderData.js';
+import {
+  Box,
+  Card,
+  CardContent,
+  Typography,
+  IconButton,
+  Link,
+} from '@mui/material';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { styled } from '@mui/material/styles';
+import SectionContainer from '../SectionContainer/SectionContainer';
+
+const Scroller = styled(Box)(() => ({
+  display: 'inline-flex',
+  gap: '16px',
+  //   animation: 'scroll-left 100s linear infinite', // duration to control speed
+  '&:hover': {
+    animationPlayState: 'paused',
+  },
+
+  //   '@keyframes scroll-left': {
+  //     '0%': {
+  //       transform: 'translateX(0%)',
+  //     },
+  //     '100%': {
+  //       transform: 'translateX(-100%)',
+  //     },
+  //   },
+}));
+
+const ToolsComponet = () => {
+  return (
+    <SectionContainer>
+      <Box
+        sx={{
+          width: '100%',
+          maxWidth: 1560,
+          mx: 'auto',
+          p: 2,
+          overflow: 'hidden',
+        }}
+      >
+        {/* The scrolling container */}
+        <Scroller>
+          {cardData.map((card, index) => (
+            <Box
+              key={`card-${index}-1`}
+              sx={{
+                flexShrink: 0,
+                width: 350,
+                minWidth: 350,
+              }}
+            >
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  p: 2,
+                  boxShadow: 3,
+                  borderRadius: 2,
+                  height: 200,
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    mb: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    sx={{ fontWeight: 'bold' }}
+                  >
+                    {card.title}
+                  </Typography>
+                  <img
+                    src={card.iconUrl}
+                    alt={`${card.title} icon`}
+                    style={{ width: 40, height: 40, borderRadius: '50%' }}
+                  />
+                </Box>
+                <CardContent sx={{ flexGrow: 1, p: 0 }}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      overflow: 'hidden',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                    }}
+                  >
+                    {card.description}
+                  </Typography>
+                </CardContent>
+                <Box sx={{ display: 'flex', gap: 1, mt: 2 }}>
+                  <Link
+                    href={card.youtubeLink}
+                    target="_blank"
+                    rel="noopener"
+                    underline="none"
+                  >
+                    <IconButton color="primary" aria-label="watch video">
+                      <PlayArrowIcon />
+                      <Typography
+                        sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
+                      >
+                        Video
+                      </Typography>
+                    </IconButton>
+                  </Link>
+                  <Link
+                    href={card.appLink}
+                    target="_blank"
+                    rel="noopener"
+                    underline="none"
+                  >
+                    <IconButton color="primary" aria-label="visit app">
+                      <OpenInNewIcon />
+                      <Typography
+                        sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
+                      >
+                        App
+                      </Typography>
+                    </IconButton>
+                  </Link>
+                </Box>
+              </Card>
+            </Box>
+          ))}
+          {/* We duplicate the cards a second time to create a seamless infinite loop */}
+          {cardData.map((card, index) => (
+            <Box
+              key={`card-${index}-2`}
+              sx={{
+                flexShrink: 0,
+                width: 350,
+                minWidth: 350,
+              }}
+            >
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  p: 2,
+                  boxShadow: 3,
+                  borderRadius: 2,
+                  height: 200,
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    mb: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    sx={{ fontWeight: 'bold' }}
+                  >
+                    {card.title}
+                  </Typography>
+                  <img
+                    src={card.iconUrl}
+                    alt={`${card.title} icon`}
+                    style={{ width: 40, height: 40, borderRadius: '50%' }}
+                  />
+                </Box>
+                <CardContent sx={{ flexGrow: 1, p: 0 }}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      overflow: 'hidden',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                    }}
+                  >
+                    {card.description}
+                  </Typography>
+                </CardContent>
+                <Box sx={{ display: 'flex', gap: 1, mt: 2 }}>
+                  <Link
+                    href={card.youtubeLink}
+                    target="_blank"
+                    rel="noopener"
+                    underline="none"
+                  >
+                    <IconButton color="primary" aria-label="watch video">
+                      <PlayArrowIcon />
+                      <Typography
+                        sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
+                      >
+                        Відео
+                      </Typography>
+                    </IconButton>
+                  </Link>
+                  <Link
+                    href={card.appLink}
+                    target="_blank"
+                    rel="noopener"
+                    underline="none"
+                  >
+                    <IconButton color="primary" aria-label="visit app">
+                      <OpenInNewIcon />
+                      <Typography
+                        sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
+                      >
+                        Додаток
+                      </Typography>
+                    </IconButton>
+                  </Link>
+                </Box>
+              </Card>
+            </Box>
+          ))}
+        </Scroller>
+      </Box>
+    </SectionContainer>
+  );
+};
+
+export default ToolsComponet;
