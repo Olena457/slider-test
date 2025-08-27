@@ -58,11 +58,11 @@ const sections = [
       },
       {
         id: 2,
-        title: 'Engagement',
+        title: 'Speak API',
         description:
           'Speak directly to your customers in a more meaningful way.',
         icon: <CampaignIcon />,
-        reference: 'https://www.google.com/engagement',
+        reference: 'https://nlpcloud.com',
         isExternal: true,
       },
       {
@@ -140,7 +140,7 @@ const Header = () => {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [featuresOpen, setFeaturesOpen] = useState(false); // Новий стан для мобільного меню
+  const [featuresOpen, setFeaturesOpen] = useState(false); // state mobile menu
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -173,7 +173,7 @@ const Header = () => {
         alignItems: 'center',
       }}
     >
-      {/* Links header */}
+      {/* Links_________________________________________ header */}
       {sections
         .filter(section => section.title !== 'Features')
         .map(section => (
@@ -411,7 +411,7 @@ const Header = () => {
             </List>
           </Collapse>
 
-          {/* Other menu items */}
+          {/* Other___________________ menu items */}
           {sections
             .filter(section => section.title !== 'Features')
             .map(section => {
@@ -458,7 +458,7 @@ const Header = () => {
             sx={{
               color: theme.palette.primary.main,
               transition: '0.3s',
-              pl: 2,
+              mr: 2,
               '&:hover, &:focus': {
                 color: theme.palette.background.default,
                 background: theme.gradients.headerFooter,
@@ -479,7 +479,7 @@ const Header = () => {
             }}
           >
             <ListItemIcon>
-              <LanguageIcon />
+              <LanguageIcon sx={{ pl: 3 }} />
             </ListItemIcon>
             <ListItemText primary="Language" />
           </ListItemButton>

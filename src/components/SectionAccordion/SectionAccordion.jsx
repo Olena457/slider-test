@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+import { Box } from '@mui/material';
 
 function SectionAccordion() {
   return (
@@ -11,7 +12,6 @@ function SectionAccordion() {
       <SectionContainer id="questions-section">
         <Typography
           variant="h4"
-          mb={6}
           component="h2"
           gutterBottom
           sx={{
@@ -21,89 +21,111 @@ function SectionAccordion() {
               md: '2.5rem',
             },
             textAlign: 'center',
+            mb: 6,
           }}
         >
           "Frequently Asked Questions"
         </Typography>
-        {/*Section 1 */}
-        <Accordion
-          sx={{
-            minWidth: { xs: 250 },
-            maxWidth: { xs: '95%', sm: '95%' },
-            mx: 'auto',
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography mb={4}>Заголовок 1</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>Текст 1 секції акордеона.</Typography>
-          </AccordionDetails>
-        </Accordion>
 
-        {/* Section 2 */}
-        <Accordion
+        <Box
           sx={{
-            minWidth: { xs: 250 },
-            maxWidth: { xs: '95%', sm: '95%' },
-            mx: 'auto',
+            px: {
+              xs: '10px',
+              sm: '30px',
+              md: '60px',
+              lg: '75px',
+              xl: '85px',
+            },
           }}
         >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            id="panel2a-header"
+          {/* Section 1 */}
+          <Accordion
+            sx={{
+              minWidth: { xs: 250 },
+              maxWidth: { xs: '100%', sm: '100%' },
+              mx: 'auto',
+            }}
           >
-            <Typography mb={4}>Заголовок 2</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>вміст 1 секції.</Typography>
-          </AccordionDetails>
-        </Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography sx={{ width: '100%', textAlign: 'center' }}>
+                Заголовок 1
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Текст 1 секції акордеона.</Typography>
+            </AccordionDetails>
+          </Accordion>
 
-        {/* Section 3 */}
-        <Accordion
-          sx={{
-            minWidth: { xs: 250 },
-            maxWidth: { xs: '95%', sm: '95%' },
-            mx: 'auto',
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel3a-content"
-            id="panel3a-header"
+          {/* Section 2 */}
+          <Accordion
+            sx={{
+              minWidth: { xs: 250 },
+              maxWidth: { xs: '100%', sm: '100%' },
+              mx: 'auto',
+            }}
           >
-            <Typography mb={4}>Заголовок 3</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>Текст 3 акордеона.</Typography>
-          </AccordionDetails>
-        </Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography sx={{ width: '100%', textAlign: 'center' }}>
+                Заголовок 2
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>вміст 1 секції.</Typography>
+            </AccordionDetails>
+          </Accordion>
 
-        {/* Section 4 */}
-        <Accordion
-          sx={{
-            minWidth: { xs: 250 },
-            maxWidth: { xs: '95%', sm: '95%' },
-            mx: 'auto',
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel4a-content"
-            id="panel4a-header"
+          {/* Section 3 */}
+          <Accordion
+            sx={{
+              minWidth: { xs: 250 },
+              maxWidth: { xs: '100%', sm: '100%' },
+              mx: 'auto',
+            }}
           >
-            <Typography mb={4}>Заголовок 4</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>Текст 4 елементи</Typography>
-          </AccordionDetails>
-        </Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              <Typography sx={{ width: '100%', textAlign: 'center' }}>
+                Заголовок 3
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Текст 3 акордеона.</Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* Section 4 */}
+          <Accordion
+            sx={{
+              minWidth: { xs: 250 },
+              maxWidth: { xs: '100%', sm: '100%' },
+              mx: 'auto',
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel4a-content"
+              id="panel4a-header"
+            >
+              <Typography sx={{ width: '100%', textAlign: 'center' }}>
+                Заголовок 4
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Текст 4 елементи</Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Box>
       </SectionContainer>
     </>
   );

@@ -7,13 +7,17 @@ const CardComponent = ({ card }) => {
         <img src={card.logo} alt={card.logo} />
       </div>
       <div className={css.containerReview}>
-        <p>{card.review}</p>
+        <p className={css.reviewText}>{card.review}</p>
       </div>
       <div className={css.iconcontainer}>
         <img className={css.icon} src={card.icon} alt={card.icon} />
       </div>
       <div className={css.profileContainer}>
-        <img src={card.customer} alt={card.customer} width={60} height={60} />
+        <img
+          src={card.customer}
+          alt={card.customer}
+          className={css.customerPhoto}
+        />
         <div className={css.containerText}>
           <h4 className={css.name}>{card.initials}</h4>
           <p className={css.company}>{card.company}</p>

@@ -19,7 +19,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: { xs: '90%', sm: 500 },
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  border: '1px solid #69a7e8',
   boxShadow: 24,
   p: 4,
   borderRadius: 2,
@@ -83,7 +83,7 @@ const LibraryList = () => {
                 position: 'absolute',
                 right: 8,
                 top: 8,
-                color: theme => theme.palette.grey[500],
+                color: theme => theme.palette.primary.main,
               }}
             >
               <CloseIcon />
@@ -92,10 +92,11 @@ const LibraryList = () => {
               id="modal-title"
               variant="h6"
               component="h2"
-              sx={{ mb: 2 }}
+              sx={{ mb: 2, color: '#69a7e8' }}
             >
               {selectedItem?.title}
             </Typography>
+            {/* _____________modal */}
             <Typography id="modal-description" sx={{ mt: 2 }}>
               {selectedItem?.description}
             </Typography>

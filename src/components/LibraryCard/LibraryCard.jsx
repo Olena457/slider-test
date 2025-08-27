@@ -87,7 +87,7 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
           gutterBottom
           variant="h5"
           component="div"
-          sx={{ fontWeight: 'bold' }}
+          sx={{ fontWeight: 'bold', color: '#69a7e8' }}
         >
           {item.title}
         </Typography>
@@ -114,11 +114,11 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
           justifyContent: 'space-between',
           p: 0,
           pt: 2,
-          borderTop: '1px solid #e0e0e0',
+          borderTop: '1px solid #69a7e8',
           mt: 'auto',
         }}
       >
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="primary.main">
           {item.name}
         </Typography>
         <IconButton onClick={handleYoutubeClick} sx={{ color: '#ff0000' }}>

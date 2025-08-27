@@ -12,16 +12,23 @@ import netlify from '../assets/icons/netlify.svg';
 
 export const toolsIcons = [
   {
-    id: 1,
-    name: 'React',
-    logo: react,
-    link: 'https://react.dev/',
-  },
-  {
     id: 2,
     name: 'Redux',
     logo: redux,
     link: 'https://redux.js.org/',
+  },
+  {
+    id: 7,
+    name: 'Material',
+    logo: material,
+    link: 'https://mui.com/',
+  },
+
+  {
+    id: 5,
+    name: 'Router',
+    logo: router,
+    link: 'https://reactrouter.com/',
   },
   {
     id: 3,
@@ -30,28 +37,10 @@ export const toolsIcons = [
     link: 'https://vitejs.dev/',
   },
   {
-    id: 4,
-    name: 'Vercel',
-    logo: vercel,
-    link: 'https://vercel.com/',
-  },
-  {
-    id: 5,
-    name: 'Router',
-    logo: router,
-    link: 'https://reactrouter.com/',
-  },
-  {
-    id: 6,
-    name: 'Sass',
-    logo: sass,
-    link: 'https://sass-lang.com/',
-  },
-  {
-    id: 7,
-    name: 'Material',
-    logo: material,
-    link: 'https://mui.com/',
+    id: 1,
+    name: 'React',
+    logo: react,
+    link: 'https://react.dev/',
   },
   {
     id: 8,
@@ -60,10 +49,10 @@ export const toolsIcons = [
     link: 'https://vuejs.org/',
   },
   {
-    id: 9,
-    name: 'Node.js',
-    logo: node,
-    link: 'https://nodejs.org/en/',
+    id: 6,
+    name: 'Sass',
+    logo: sass,
+    link: 'https://sass-lang.com/',
   },
   {
     id: 10,
@@ -71,6 +60,21 @@ export const toolsIcons = [
     logo: tail,
     link: 'https://tailwindcss.com/',
   },
+
+  {
+    id: 4,
+    name: 'Vercel',
+    logo: vercel,
+    link: 'https://vercel.com/',
+  },
+
+  {
+    id: 9,
+    name: 'Node.js',
+    logo: node,
+    link: 'https://nodejs.org/en/',
+  },
+
   {
     id: 11,
     name: 'Netlify',
