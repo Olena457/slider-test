@@ -26,7 +26,7 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
         backgroundColor: '#fff',
         borderRadius: '30px',
         overflow: 'hidden',
-        boxShadow: '5px 5px 20px rgba(0, 0, 0, 0.1)',
+        boxShadow: 4,
         transition: 'transform 0.3s ease',
         '&:hover': {
           transform: 'translateY(-5px)',

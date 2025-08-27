@@ -1,6 +1,6 @@
 import { features } from '../../data/featuresData.js';
 import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
-import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+// import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import { useState, useEffect, useRef } from 'react';
 
 const AdvantagesComponent = () => {
@@ -83,12 +83,12 @@ const AdvantagesComponent = () => {
             <Box
               key={index}
               sx={{
+                background: `linear-gradient(45deg, #e0f7fa, #ffffff)`,
                 position: 'relative',
                 overflow: 'hidden',
-                backgroundColor: 'white',
                 borderRadius: '16px',
                 p: 2,
-                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                boxShadow: 4,
 
                 // animation
                 opacity: isAnimated ? 1 : 0,
@@ -110,7 +110,7 @@ const AdvantagesComponent = () => {
                   bottom: '10px',
                   borderRadius: '10px',
                   pointerEvents: 'none',
-                  border: '1px solid #e0e0e0',
+                  border: '1px solid #69a7e8',
                 },
               }}
             >

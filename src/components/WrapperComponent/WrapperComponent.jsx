@@ -8,10 +8,11 @@ import LibraryList from '../LibraryList/LibraryList.jsx';
 import css from './WrapperComponent.module.css';
 import TeachComponents from '../TeachComponents/TeachComponents.jsx';
 import ToolsComponet from '../ToolsComponent/ToolsComponent.jsx';
-
+import FloatingComponent from '../FloatigComponent/FloatingComponent.jsx';
 const WrapperComponent = () => {
   return (
     <>
+      <FloatingComponent />
       <TeachComponents />
 
       <SectionContainer id="reviews-section" maxWidth="90%" mx="auto">

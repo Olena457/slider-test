@@ -525,22 +525,17 @@ const Header = () => {
             sx={{
               fontWeight: 'bold',
               lineHeight: 1,
-              color: '#b4ff72',
+              color: '#ffff',
               position: 'absolute',
               top: '50%',
-              left: {
-                xs: '5%',
-                // sm: '5%',
-                // md: '5%',
-                // lg: '5%',
-              },
+              left: { xs: '5%' },
               transform: 'translate(-50%, -50%)',
               textTransform: 'uppercase',
               whiteSpace: 'nowrap',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
               '&:hover, &:focus': {
                 color: theme.palette.primary.main,
                 textDecoration: 'none',
-
                 cursor: 'pointer',
               },
             }}

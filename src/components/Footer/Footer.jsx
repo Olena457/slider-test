@@ -85,6 +85,7 @@ const Footer = () => {
                   },
                   transform: 'translate(-50%, -50%)',
                   textTransform: 'uppercase',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                   whiteSpace: 'nowrap',
                   mb: 0.5,
                   '&:hover, &:focus': {
@@ -122,6 +123,8 @@ const Footer = () => {
                     color={theme.palette.text.primary}
                     sx={{
                       fontWeight: 600,
+                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+
                       textTransform: 'uppercase',
                       fontSize: {
                         xs: '1rem',
@@ -143,6 +146,7 @@ const Footer = () => {
                           display="block"
                           sx={{
                             mb: 0.5,
+
                             '&:hover, &:focus': {
                               color: theme.palette.background.default,
                               textDecoration: 'underline',
@@ -161,6 +165,7 @@ const Footer = () => {
                           display="block"
                           sx={{
                             mb: 0.5,
+
                             '&:hover, &:focus': {
                               color: theme.palette.background.default,
                               textDecoration: 'underline',
@@ -182,7 +187,6 @@ const Footer = () => {
         {/* ============================ */}
         <Box textAlign="center">
           <Box mb={2}>
-            {/* Оновлений блок, який використовує масив socialLinks для динамічного створення посилань */}
             {socialLinks.map((social, i) => (
               <Link
                 key={i}

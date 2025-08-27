@@ -134,7 +134,7 @@ const ToolsComponet = () => {
               </Card>
             </Box>
           ))}
-          {/* We duplicate the cards a second time to create a seamless infinite loop */}
+          {/*  duplicate the cards a second time to create a seamless infinite loop */}
           {cardData.map((card, index) => (
             <Box
               key={`card-${index}-2`}

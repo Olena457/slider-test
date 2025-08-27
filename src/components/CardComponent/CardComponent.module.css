@@ -4,6 +4,7 @@
   width: auto;
   max-width: 460px;
   min-height: 502px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
   background-color: var(--white-color);
   border: 1px solid #4a93ff;
   border-radius: 20px;
