@@ -1,10 +1,9 @@
-import React from 'react';
-import { ListItem, Typography, Box, IconButton } from '@mui/material';
+import { ListItem, Typography, Box, IconButton, Paper } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const ItemComponent = ({ item, onDeleteItem }) => {
   return (
-    <ListItem>
+    <ListItem component={Paper} elevation={3} sx={{ my: 1, borderRadius: 2 }}>
       <Box
         sx={{
           display: 'flex',
@@ -13,12 +12,23 @@ const ItemComponent = ({ item, onDeleteItem }) => {
           width: '100%',
         }}
       >
-        <Typography variant="body1">
-          {item.name} - {item.price} грн
+        <Typography variant="body1" color="textSecondary">
+          {item.name} - {item.amount} items - {item.price} USD/pc.
+        </Typography>
+        <Typography
+          variant="body1"
+          color="textPrimary"
+          sx={{
+            ml: 2,
+            fontWeight: 'bold',
+          }}
+        >
+          Sum: {(item.price * item.amount).toFixed(2)} USD
         </Typography>
         <IconButton
           edge="end"
           aria-label="delete"
+          sx={{ color: '#4a93ff' }}
           onClick={() => onDeleteItem(item.id)}
         >
           <DeleteIcon />

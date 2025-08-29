@@ -1,8 +1,7 @@
 import { ThemeProvider } from '@mui/material/styles';
-import { useState } from 'react';
 import { Container, CssBaseline, Box } from '@mui/material';
-import FormComponent from './FormComponent';
-import ItemsList from './ItemsList';
+import FormComponent from './components/FormComponent/FormComponent.jsx';
+import ItemsList from './components/ItemList/ItemList.jsx';
 import myCustomTheme from './theme.js';
 import Header from './components/Header/Header.jsx';
 import WrapperComponent from './components/WrapperComponent/WrapperComponent.jsx';
@@ -17,15 +16,7 @@ function App() {
   //     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   //   }
   // };
-  const [items, setItems] = useState([]);
 
-  const handleAddItem = newItem => {
-    setItems([...items, { ...newItem, id: Date.now() }]);
-  };
-
-  const handleDeleteItem = id => {
-    setItems(items.filter(item => item.id !== id));
-  };
   return (
     <>
       <ThemeProvider theme={myCustomTheme}>
@@ -42,8 +33,8 @@ function App() {
           <CssBaseline />
           <Container maxWidth="sm">
             <Box sx={{ my: 4 }}>
-              <FormComponent onAddItem={handleAddItem} />
-              <ItemsList items={items} onDeleteItem={handleDeleteItem} />
+              <FormComponent />
+              <ItemsList />
             </Box>
           </Container>
           <Footer />

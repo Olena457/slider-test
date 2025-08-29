@@ -91,6 +91,15 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
         >
           {item.title}
         </Typography>
+        {item.price && (
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            sx={{ mb: 1, fontWeight: 'bold' }}
+          >
+            Price: ${item.price}
+          </Typography>
+        )}
         <Typography
           variant="body2"
           color="text.secondary"
