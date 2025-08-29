@@ -1,0 +1,205 @@
+import { useState } from 'react';
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  Button,
+  Modal,
+} from '@mui/material';
+import {
+  ThumbUpAlt as LikeIcon,
+  Comment as CommentIcon,
+} from '@mui/icons-material';
+import transparent from '../../assets/images/hi.png';
+import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+import css from './InfinityTextAnimation.module.css';
+
+const InfinityTextAnimation = ({
+  text = 'AIDE PERSONAL DEVELOPMENT ENGINE',
+}) => {
+  const letters = text.split('');
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <SectionContainer>
+      <Box className={css.mainContainer}>
+        <Box className={css.circlesRow}>
+          <Box className={css.circleWrapper}>
+            <Box
+              component="img"
+              src={transparent}
+              alt="Animated Photo"
+              className={css.imageCircle}
+            />
+          </Box>
+          <Box className={css.circleWrapper}>
+            <Box className={css.aideCircle}>
+              <Typography variant="h3" className={css.aideText}>
+                AIDE
+              </Typography>
+            </Box>
+          </Box>
+          <Card
+            className={css.promoCard}
+            elevation={3}
+            sx={{
+              borderRadius: '16px', // Або будь-яке інше значення, наприклад '20px'
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+
+              color: 'white',
+              textAlign: 'center',
+              padding: '1rem',
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h5"
+                component="h3"
+                className={css.cardTitle}
+                gutterBottom
+                color="primary"
+              >
+                Try Now!
+              </Typography>
+              <Typography
+                marginTop={3}
+                variant="body1"
+                className={css.cardText}
+                color="#ff0000"
+              >
+                Try a free trial period, find out more information.
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                className={css.cardButton}
+                onClick={handleOpen}
+                sx={{
+                  mt: 5,
+                  color: '#fff',
+                  backgroundColor: theme => theme.palette.primary.main,
+                  '&:hover': {
+                    backgroundColor: theme => theme.palette.primary.dark,
+                    color: '#000',
+                  },
+                }}
+              >
+                More Details
+              </Button>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box className={css.infinityTextWrapper}>
+          <Box className={css.swirl}>
+            {letters.map((char, index) => (
+              <span
+                key={index}
+                style={{
+                  '--char-index': index,
+                  '--total-chars': letters.length,
+                  '--glow': `hsl(${(360 / letters.length) * index} 100% 50%)`,
+                }}
+              >
+                {char}
+              </span>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Modal window */}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: { xs: '90%', md: 400 },
+            bgcolor: 'background.paper',
+            border: '2px solid #000',
+            boxShadow: 24,
+            p: 4,
+            borderRadius: 2,
+            textAlign: 'center',
+            color: '#333',
+          }}
+        >
+          <Typography
+            id="modal-modal-title"
+            variant="h6"
+            component="h2"
+            gutterBottom
+            color="primary"
+          >
+            Free Trial Period
+          </Typography>
+          <Typography
+            id="modal-modal-description"
+            sx={{ mt: 2, textAlign: 'left' }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                mb: 1,
+                color: '#ff0000',
+              }}
+            >
+              <LikeIcon color="primary" sx={{ mr: 1 }} />
+              **Basic subscription** for a month for one LinkedIn **like**.
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                mb: 1,
+                color: '#ff0000',
+              }}
+            >
+              <CommentIcon color="#ff0000" sx={{ mr: 1 }} />
+              **Pro subscription** for a year for one LinkedIn **comment**.
+            </Box>
+          </Typography>
+          <Typography
+            sx={{
+              mt: 3,
+              fontStyle: 'italic',
+              textAlign: 'center',
+              color: '#1a73e8',
+            }}
+          >
+            Thank you for your attention!
+          </Typography>
+          <Button
+            onClick={handleClose}
+            variant="contained"
+            className={css.cardButton}
+            sx={{
+              mt: 2,
+              color: '#fff',
+              backgroundColor: theme => theme.palette.primary.main,
+              '&:hover': {
+                backgroundColor: theme => theme.palette.primary.dark,
+                color: '#000',
+              },
+            }}
+          >
+            Close
+          </Button>
+        </Box>
+      </Modal>
+    </SectionContainer>
+  );
+};
+
+export default InfinityTextAnimation;

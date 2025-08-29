@@ -34,7 +34,9 @@ body {
   font-weight: 400;
   min-height: 100vh;
   font-style: normal;
-  background: var(--body-color);
+  background: linear-gradient(to right, #6dd5ed, #2193b0, #00b4db, #0083b0);
+
+  /* background: var(--body-color); */
   /* color: var(--black-color);
   /* background-image: url('../src/assets/images/background.png');
   background-size: cover;

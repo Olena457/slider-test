@@ -1,7 +1,5 @@
 import { ThemeProvider } from '@mui/material/styles';
-import { Container, CssBaseline, Box } from '@mui/material';
-import FormComponent from './components/FormComponent/FormComponent.jsx';
-import ItemsList from './components/ItemList/ItemList.jsx';
+
 import myCustomTheme from './theme.js';
 import Header from './components/Header/Header.jsx';
 import WrapperComponent from './components/WrapperComponent/WrapperComponent.jsx';
@@ -30,13 +28,6 @@ function App() {
           maxWidth="100%"
           mx="auto"
         >
-          <CssBaseline />
-          <Container maxWidth="sm">
-            <Box sx={{ my: 4 }}>
-              <FormComponent />
-              <ItemsList />
-            </Box>
-          </Container>
           <Footer />
         </SectionContainer>
       </ThemeProvider>

@@ -9,19 +9,23 @@ import css from './WrapperComponent.module.css';
 import TeachComponents from '../TeachComponents/TeachComponents.jsx';
 import ToolsComponet from '../ToolsComponent/ToolsComponent.jsx';
 import FloatingComponent from '../FloatigComponent/FloatingComponent.jsx';
+import { Container, CssBaseline, Box } from '@mui/material';
+import FormComponent from '../../components/FormComponent/FormComponent.jsx';
+import ItemsList from '../../components/ItemList/ItemList.jsx';
+import InfinityTextAnimation from '../../components/InfinityTextAnimation/InfinityTextAnimantion.jsx';
 const WrapperComponent = () => {
   return (
     <>
       <FloatingComponent />
       <TeachComponents />
-
       <SectionContainer id="reviews-section" maxWidth="90%" mx="auto">
+        <AdvantagesComponent />
+
         <div className={css.sliderContainer}>
           <div className={css.sliderContent}>
             <div className={css.titleContainer}>
               <Typography
                 variant="h3"
-                // mb={1}
                 component="h2"
                 gutterBottom
                 sx={{
@@ -43,8 +47,15 @@ const WrapperComponent = () => {
       </SectionContainer>
       <SectionAccordion />
       <LibraryList />
-      <AdvantagesComponent />
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <Box sx={{ my: 4 }}>
+          <FormComponent />
+          <ItemsList />
+        </Box>
+      </Container>
       <ToolsComponet />
+      <InfinityTextAnimation text="AIDE  PERSONAL DEVELOPMENT ENGINE" />
     </>
   );
 };

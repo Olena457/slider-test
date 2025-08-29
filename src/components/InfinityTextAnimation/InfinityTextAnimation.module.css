@@ -1,0 +1,172 @@
+.mainContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.circlesRow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 20px; */
+  flex-direction: column;
+}
+
+.circleWrapper {
+  width: 30vh;
+  height: 30vh;
+}
+
+.infinityTextWrapper {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  width: 40vh;
+  height: 40vh;
+  /* z-index: 5; */
+}
+@media (min-width: 768px) {
+  .infinityTextWrapper {
+    top: 68%;
+    left: 40%;
+    transform: translate(-50%, -90%);
+    width: 20vh;
+    height: 20vh;
+  }
+}
+@media (min-width: 1024px) {
+  .infinityTextWrapper {
+    top: 70%;
+    left: 35%;
+    transform: translate(-50%, -90%);
+    width: 20vh;
+    height: 20vh;
+  }
+}
+
+.imageCircle,
+.aideCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageCircle {
+  object-fit: contain;
+}
+
+.aideText {
+  color: white;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.promoCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  min-height: 250px;
+  min-width: 280px;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+.cardTitle {
+  font-weight: bold;
+}
+
+.cardText {
+  margin-top: 5rem;
+}
+
+.cardButton {
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.swirl {
+  position: absolute;
+  inset: 0;
+  animation: spin 30s linear infinite;
+}
+
+.swirl span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform-origin: 0 100%;
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px var(--glow), 0 0 10px var(--glow), 0 0 15px var(--glow);
+  transform: translate(-50%, -50%)
+    rotate(calc(360deg / var(--total-chars) * var(--char-index)));
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.aideText {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .aideText {
+    font-size: 4rem;
+  }
+
+  .circlesRow {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .infinityTextWrapper {
+    width: 55vh;
+    height: 55vh;
+  }
+
+  .circleWrapper {
+    flex-shrink: 0;
+  }
+
+  .promoCard {
+    width: 40%;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .circlesRow {
+    gap: 115px;
+  }
+}
+@media (min-width: 1400px) {
+  .circlesRow {
+    gap: 185px;
+  }
+}
