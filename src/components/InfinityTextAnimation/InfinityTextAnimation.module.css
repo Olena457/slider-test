@@ -124,14 +124,14 @@
     rotate(calc(360deg / var(--total-chars) * var(--char-index)));
 }
 
-@keyframes spin {
+/* @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 .aideText {
   font-size: 1rem;
 }
