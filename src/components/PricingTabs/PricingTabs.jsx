@@ -27,7 +27,7 @@ const TabButton = styled(Button, {
     ? theme.palette.grey[550]
     : theme.palette.grey[450],
   cursor: 'pointer',
-  padding: '2.75rem 0',
+  padding: '1.8rem 0',
   position: 'relative',
   transition: theme.transitions.create('color'),
   '&:hover': {

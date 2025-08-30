@@ -96,7 +96,7 @@ const AdvantagesComponent = () => {
                 transform: isAnimated ? 'translateY(0)' : 'translateY(20px)',
                 transition: 'opacity 0.9s ease-out, transform 0.9s ease-out',
                 transitionDelay: isAnimated ? `${index * 0.3}s` : '0s',
-                minHeight: '220px',
+                minHeight: '255px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-around',

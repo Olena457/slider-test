@@ -105,7 +105,7 @@ const InfinityTextAnimation = ({
                 marginTop={3}
                 variant="body1"
                 className={css.cardText}
-                color="#ff0000"
+                color="#4d535b"
               >
                 Try a free trial period, find out more information.
               </Typography>
@@ -162,8 +162,8 @@ const InfinityTextAnimation = ({
             left: '50%',
             transform: 'translate(-50%, -50%)',
             width: { xs: '90%', md: 400 },
-            bgcolor: 'background.paper',
-            border: '2px solid #000',
+            background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
+            border: '2px solid #0083b0',
             boxShadow: 24,
             p: 4,
             borderRadius: 2,
@@ -212,7 +212,7 @@ const InfinityTextAnimation = ({
               mt: 3,
               fontStyle: 'italic',
               textAlign: 'center',
-              color: '#1a73e8',
+              color: '#0083b0',
             }}
           >
             Thank you for your attention!
