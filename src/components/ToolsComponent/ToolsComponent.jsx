@@ -77,6 +77,8 @@ const ToolsComponet = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
+                  background:
+                    'linear-gradient(to left, #6dd5ed, #2daac9ff, #00b4db, #1188b0ff)',
                   p: 2,
                   boxShadow: 3,
                   borderRadius: 2,
@@ -125,7 +127,7 @@ const ToolsComponet = () => {
                     rel="noopener"
                     underline="none"
                   >
-                    <IconButton color="primary" aria-label="watch video">
+                    <IconButton color="#4d535b" aria-label="watch video">
                       <PlayArrowIcon />
                       <Typography
                         sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
@@ -140,7 +142,7 @@ const ToolsComponet = () => {
                     rel="noopener"
                     underline="none"
                   >
-                    <IconButton color="primary" aria-label="visit app">
+                    <IconButton color="#4d535b" aria-label="visit app">
                       <OpenInNewIcon />
                       <Typography
                         sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
@@ -216,12 +218,12 @@ const ToolsComponet = () => {
                     rel="noopener"
                     underline="none"
                   >
-                    <IconButton color="primary" aria-label="watch video">
+                    <IconButton color="#4d535b" aria-label="watch video">
                       <PlayArrowIcon />
                       <Typography
                         sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
                       >
-                        Відео
+                        Video
                       </Typography>
                     </IconButton>
                   </Link>
@@ -231,12 +233,12 @@ const ToolsComponet = () => {
                     rel="noopener"
                     underline="none"
                   >
-                    <IconButton color="primary" aria-label="visit app">
+                    <IconButton color="#4d535b" aria-label="visit app">
                       <OpenInNewIcon />
                       <Typography
                         sx={{ ml: 1, display: { xs: 'none', sm: 'block' } }}
                       >
-                        Додаток
+                        App
                       </Typography>
                     </IconButton>
                   </Link>

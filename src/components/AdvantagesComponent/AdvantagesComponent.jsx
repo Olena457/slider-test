@@ -85,7 +85,7 @@ const AdvantagesComponent = () => {
             <Box
               key={index}
               sx={{
-                background: `linear-gradient(45deg, #e0f7fa, #ffffff)`,
+                background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
                 position: 'relative',
                 overflow: 'hidden',
                 borderRadius: '16px',

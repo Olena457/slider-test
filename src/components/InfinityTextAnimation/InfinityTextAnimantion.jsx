@@ -73,17 +73,7 @@ const InfinityTextAnimation = ({
             sx={{
               borderRadius: '16px',
               marginBottom: '2.2rem',
-              background: `linear-gradient(
-      75deg,
-      #4a93ff,
-      #00aef6,
-      #00c3e5,
-      #00d7d8,
-      #00ebc3,
-      #28ff90,
-      #b4ff72,
-      #f9ff28
-    )`,
+              background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
               border: '1px solid rgba(255, 255, 255, 0.3)',
               color: 'white',
               textAlign: 'center',

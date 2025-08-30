@@ -55,6 +55,7 @@ const PricingComponent = () => {
             sm: 3,
             md: 6,
           },
+          background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
         }}
       >
         <Typography

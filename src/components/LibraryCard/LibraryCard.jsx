@@ -60,6 +60,12 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
           height: 180,
           overflow: 'hidden',
           borderRadius: '15px',
+
+          background:
+            'linear-gradient(to right, #6dd5ed, #2193b0, #00b4db, #0083b0)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <Box
@@ -69,7 +75,10 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
           sx={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
+            // objectFit: 'cover',
+            objectFit: 'contain',
+            objectPosition: 'center',
+            padding: '10px 10px 0 10px',
           }}
         />
       </Box>

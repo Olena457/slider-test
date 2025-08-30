@@ -1,7 +1,19 @@
+import robot1 from '../assets/images/grid/robot-1.png';
+import robot4 from '../assets/images/grid/robot-4.png';
+import robot5 from '../assets/images/grid/robot-5.png';
+import robot6 from '../assets/images/grid/robot-6.png';
+import robot7 from '../assets/images/grid/robot-7.png';
+import robot9 from '../assets/images/grid/robot-9.png';
+import robot11 from '../assets/images/grid/robot-11.png';
+import robot12 from '../assets/images/grid/robot-12.png';
+import robot13 from '../assets/images/grid/robot-13.png';
+import robot14 from '../assets/images/grid/robot-14.png';
+import robot from '../assets/images/grid/robot.png';
+
 const libraryData = [
   {
     id: 1,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot1,
     title: 'Video Title 1',
     price: '10$',
     description:
@@ -11,7 +23,7 @@ const libraryData = [
   },
   {
     id: 2,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot13,
     title: 'Video Title 2',
     price: '2$',
     description:
@@ -21,7 +33,7 @@ const libraryData = [
   },
   {
     id: 3,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot7,
     title: 'Video Title 2',
     price: '3$',
     description:
@@ -31,7 +43,7 @@ const libraryData = [
   },
   {
     id: 4,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot6,
     title: 'Quick Preview',
     price: '3.50$',
     description:
@@ -41,7 +53,7 @@ const libraryData = [
   },
   {
     id: 5,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot4,
     title: 'Quick Preview',
     price: '5.50$',
     description:
@@ -51,7 +63,7 @@ const libraryData = [
   },
   {
     id: 6,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot9,
     title: 'Video Title 6',
     price: '2.50$',
     description:
@@ -61,7 +73,7 @@ const libraryData = [
   },
   {
     id: 7,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot14,
     title: 'Video Title 7',
     price: '7$',
     description:
@@ -71,7 +83,7 @@ const libraryData = [
   },
   {
     id: 8,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot11,
     title: 'Video Title 8',
     price: '3.50$',
     description:
@@ -81,7 +93,7 @@ const libraryData = [
   },
   {
     id: 9,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot,
     title: 'Video Title 9',
     price: '4.50$',
     description:
@@ -91,7 +103,7 @@ const libraryData = [
   },
   {
     id: 10,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot5,
     title: 'Video Title 10',
     price: '5$',
     description:
@@ -101,7 +113,7 @@ const libraryData = [
   },
   {
     id: 11,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot12,
     title: 'Video Title 11',
     price: '8$',
     description:
@@ -111,7 +123,7 @@ const libraryData = [
   },
   {
     id: 12,
-    photo: 'https://ftp.goit.study/img/avatars/30.jpg',
+    photo: robot4,
     title: 'Video Title 12',
     price: '9$',
     description:

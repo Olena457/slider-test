@@ -7,7 +7,6 @@ const myCustomTheme = createTheme({
     },
     secondary: {
       main: '#2193b0',
-      // main: '#69a7e8',
     },
     dark: {
       main: '#30363d',

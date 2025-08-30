@@ -306,6 +306,7 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
+              background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
             }}
           >
             <AccordionSummary
@@ -342,7 +343,6 @@ function SectionAccordion() {
                   width: '100%',
                   textAlign: 'center',
                   color: '#0083b0',
-                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
                 }}
               >
                 What AI tools are included in the app?
@@ -371,6 +371,7 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
+              background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
             }}
           >
             <AccordionSummary
@@ -407,7 +408,6 @@ function SectionAccordion() {
                   width: '100%',
                   textAlign: 'center',
                   color: '#0083b0',
-                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
                 }}
               >
                 How can I get started with the AI tools?
@@ -436,6 +436,7 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
+              background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
             }}
           >
             <AccordionSummary
@@ -472,7 +473,6 @@ function SectionAccordion() {
                   width: '100%',
                   textAlign: 'center',
                   color: '#0083b0',
-                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
                 }}
               >
                 Is my data secure when using the app?
@@ -501,6 +501,7 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
+              background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
             }}
           >
             <AccordionSummary
@@ -537,7 +538,6 @@ function SectionAccordion() {
                   width: '100%',
                   textAlign: 'center',
                   color: '#0083b0',
-                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
                 }}
               >
                 What integrations are available?

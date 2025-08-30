@@ -110,9 +110,9 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 3px solid #2193b0;
+  border: 3px solid #3ab7d6ff;
   box-shadow: 0 0 10px 5px;
-  box-shadow: 0 0 10px 5px #2193b0;
+  box-shadow: 0 0 10px 5px #3ab7d6ff;
 }
 
 @media (min-width: 480px) {
