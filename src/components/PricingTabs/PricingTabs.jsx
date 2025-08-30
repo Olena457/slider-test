@@ -1,40 +1,101 @@
-import { useEffect, useRef } from 'react';
-const PricingTabs = ({ billingCycle, onChange }) => {
-  const indicatorRef = useRef(null);
-  const tabsRef = useRef({});
+import { useRef } from 'react';
+import { Box, Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { motion } from 'framer-motion';
 
+const TabsWrapper = styled(Box)(({ theme }) => ({
+  boxShadow: `inset 0 -1px 0 ${
+    theme.palette.mode === 'light'
+      ? theme.palette.grey[200]
+      : theme.palette.grey[800]
+  }`,
+  display: 'flex',
+  position: 'relative',
+  width: '100%',
+  marginBottom: '3em',
+  transition: theme.transitions.create('box-shadow'),
+}));
+
+const TabButton = styled(Button)(({ theme, isActive }) => ({
+  flexGrow: 1,
+  background: 'none',
+  color: isActive
+    ? theme.palette.text.primary
+    : theme.palette.mode === 'light'
+    ? theme.palette.grey[550]
+    : theme.palette.grey[450],
+  cursor: 'pointer',
+  padding: '2.75rem 0',
+  position: 'relative',
+  transition: theme.transitions.create('color'),
+  '&:hover': {
+    color: isActive
+      ? theme.palette.text.primary
+      : theme.palette.mode === 'light'
+      ? theme.palette.grey[650]
+      : theme.palette.grey[350],
+    backgroundColor: 'transparent',
+  },
+  '&.Mui-focusVisible': {
+    boxShadow: `inset 0 0 0 2px ${theme.palette.primary.main}`,
+  },
+}));
+
+const TabText = styled(Box)(({ theme, isActive }) => ({
+  display: 'inline-block',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.standard,
+    easing: theme.transitions.easing.easeInOut,
+  }),
+  transform: isActive ? 'scale(1.5)' : 'none',
+}));
+
+const TabIndicator = styled(motion.div)({
+  backgroundColor: 'currentColor',
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  height: '1px',
+});
+
+const PricingTabs = ({ billingCycle, onChange }) => {
+  const tabsRef = useRef({});
   const tabNames = ['monthly', 'yearly'];
 
-  useEffect(() => {
+  const getIndicatorPosition = () => {
     const activeTab = tabsRef.current[billingCycle];
-    const indicator = indicatorRef.current;
-
-    if (activeTab && indicator) {
-      const rect = activeTab.getBoundingClientRect();
-      const containerRect = activeTab.parentElement.getBoundingClientRect();
-      const translateX = rect.left - containerRect.left;
-
-      indicator.style.width = `${rect.width}px`;
-      indicator.style.transform = `translateX(${translateX}px)`;
+    if (activeTab) {
+      return {
+        width: activeTab.offsetWidth,
+        x: activeTab.offsetLeft,
+      };
     }
-  }, [billingCycle]);
+    return { width: 0, x: 0 };
+  };
 
   return (
     <TabsWrapper>
-      {tabNames.map(cycle => (
-        <TabButton
-          key={cycle}
-          ref={el => (tabsRef.current[cycle] = el)}
-          isActive={billingCycle === cycle}
-          onClick={() => onChange(cycle)}
-        >
-          <Box component="span">
-            {cycle === 'monthly' ? 'Monthly' : 'Yearly'}
-          </Box>
-        </TabButton>
-      ))}
-      <TabIndicator ref={indicatorRef} />
+      {tabNames.map(cycle => {
+        const isActive = billingCycle === cycle;
+        return (
+          <TabButton
+            key={cycle}
+            ref={el => (tabsRef.current[cycle] = el)}
+            isActive={isActive}
+            onClick={() => onChange(cycle)}
+          >
+            <TabText isActive={isActive}>
+              {cycle === 'monthly' ? 'Monthly' : 'Yearly'}
+            </TabText>
+          </TabButton>
+        );
+      })}
+      <TabIndicator
+        animate={getIndicatorPosition()}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+      />
     </TabsWrapper>
   );
 };
+
 export default PricingTabs;

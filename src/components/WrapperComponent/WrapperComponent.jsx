@@ -1,18 +1,19 @@
 import { cards } from '../../data/cardsData.js';
-import { Typography } from '@mui/material';
+import { Container, CssBaseline, Box, Typography } from '@mui/material';
 import CardsSlider from '../CardsSlider/CardsSlider.jsx';
 import AdvantagesComponent from '../AdvantagesComponent/AdvantagesComponent.jsx';
 import SectionAccordion from '../SectionAccordion/SectionAccordion.jsx';
 import SectionContainer from '../SectionContainer/SectionContainer';
 import LibraryList from '../LibraryList/LibraryList.jsx';
-import css from './WrapperComponent.module.css';
 import TeachComponents from '../TeachComponents/TeachComponents.jsx';
 import ToolsComponet from '../ToolsComponent/ToolsComponent.jsx';
 import FloatingComponent from '../FloatigComponent/FloatingComponent.jsx';
-import { Container, CssBaseline, Box } from '@mui/material';
 import FormComponent from '../../components/FormComponent/FormComponent.jsx';
 import ItemsList from '../../components/ItemList/ItemList.jsx';
 import InfinityTextAnimation from '../../components/InfinityTextAnimation/InfinityTextAnimantion.jsx';
+import PricingContainer from '../../components/PricingContainer/PricingContainer.jsx';
+import css from './WrapperComponent.module.css';
+
 const WrapperComponent = () => {
   return (
     <>
@@ -55,6 +56,7 @@ const WrapperComponent = () => {
         </Box>
       </Container>
       <ToolsComponet />
+      <PricingContainer />
       <InfinityTextAnimation text="AIDE  PERSONAL DEVELOPMENT ENGINE" />
     </>
   );

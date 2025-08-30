@@ -47,12 +47,23 @@ const InfinityTextAnimation = ({
             className={css.promoCard}
             elevation={3}
             sx={{
-              borderRadius: '16px', // Або будь-яке інше значення, наприклад '20px'
+              borderRadius: '16px',
               border: '1px solid rgba(255, 255, 255, 0.3)',
 
               color: 'white',
               textAlign: 'center',
               padding: '1rem',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: '10px',
+                left: '10px',
+                right: '10px',
+                bottom: '10px',
+                borderRadius: '10px',
+                pointerEvents: 'none',
+                border: '1px solid #69a7e8',
+              },
             }}
           >
             <CardContent>

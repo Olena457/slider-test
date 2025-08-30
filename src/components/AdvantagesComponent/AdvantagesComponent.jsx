@@ -89,13 +89,11 @@ const AdvantagesComponent = () => {
                 borderRadius: '16px',
                 p: 2,
                 boxShadow: 4,
-
                 // animation
                 opacity: isAnimated ? 1 : 0,
                 transform: isAnimated ? 'translateY(0)' : 'translateY(20px)',
                 transition: 'opacity 0.9s ease-out, transform 0.9s ease-out',
                 transitionDelay: isAnimated ? `${index * 0.3}s` : '0s',
-
                 minHeight: '220px',
                 display: 'flex',
                 flexDirection: 'column',
