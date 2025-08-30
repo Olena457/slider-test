@@ -76,38 +76,40 @@ const FloatingTextComponent = () => {
   const layers = Array.from({ length: layersCount }, (_, i) => i + 1);
 
   return (
-    <Container>
-      <Scene>
-        <LayeredText>
-          <span>{text}</span>
-          <div className="layers" aria-hidden="true">
-            {layers.map(i => (
-              <Box key={i} className="layer" style={{ '--i': i }}>
-                {text}
-              </Box>
-            ))}
-          </div>
-        </LayeredText>
-      </Scene>
+    <div id="home-section">
+      <Container>
+        <Scene>
+          <LayeredText>
+            <span>{text}</span>
+            <div className="layers" aria-hidden="true">
+              {layers.map(i => (
+                <Box key={i} className="layer" style={{ '--i': i }}>
+                  {text}
+                </Box>
+              ))}
+            </div>
+          </LayeredText>
+        </Scene>
 
-      <Box
-        component="img"
-        src={hiPhoto}
-        alt="photo"
-        sx={{
-          position: 'absolute',
-          bottom: '80px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          maxWidth: '80%',
-          height: 'auto',
-          zIndex: -1,
-          '@media (max-width: 767px)': {
-            bottom: '130px',
-          },
-        }}
-      />
-    </Container>
+        <Box
+          component="img"
+          src={hiPhoto}
+          alt="photo"
+          sx={{
+            position: 'absolute',
+            bottom: '80px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            maxWidth: '80%',
+            height: 'auto',
+            zIndex: -1,
+            '@media (max-width: 767px)': {
+              bottom: '115px',
+            },
+          }}
+        />
+      </Container>
+    </div>
   );
 };
 

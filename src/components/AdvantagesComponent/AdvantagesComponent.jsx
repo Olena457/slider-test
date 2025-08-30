@@ -48,7 +48,6 @@ const AdvantagesComponent = () => {
       >
         <Typography
           variant="h4"
-          mb={6}
           component="h2"
           gutterBottom
           sx={{
@@ -58,6 +57,9 @@ const AdvantagesComponent = () => {
               md: '2.5rem',
             },
             textAlign: 'center',
+            mb: 6,
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
           }}
         >
           "Why is this app the right choice for you?"

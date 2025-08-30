@@ -27,29 +27,50 @@ const PricingComponent = () => {
   };
 
   return (
-    <PricingContainer borderRadius="16px">
+    <div id="plans-section">
       <Typography
         variant="h4"
-        color="primary"
         component="h2"
+        gutterBottom
         sx={{
-          fontSize: '1.5em',
-          fontWeight: 500,
-          lineHeight: 1,
-          marginBottom: '1rem',
+          fontSize: {
+            xs: '1.5rem',
+            sm: '1.8rem',
+            md: '2.5rem',
+          },
+          textAlign: 'center',
+          pt: 14,
+          mb: 14,
+          color: 'white',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
         }}
       >
-        Pick Your Plan
+        Pick the plan that fits you!
       </Typography>
-      <PricingTabs billingCycle={billingCycle} onChange={setBillingCycle} />
-      <PricingPlans
-        billingCycle={billingCycle}
-        plans={plans[billingCycle]}
-        selectedPlan={selectedPlan}
-        onSelectPlan={setSelectedPlan}
-        units={units}
-      />
-    </PricingContainer>
+      <PricingContainer borderRadius="16px">
+        <Typography
+          variant="h4"
+          color="primary"
+          component="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontWeight: 500,
+            lineHeight: 1,
+            marginBottom: '1rem',
+          }}
+        >
+          Pick Your Plan
+        </Typography>
+        <PricingTabs billingCycle={billingCycle} onChange={setBillingCycle} />
+        <PricingPlans
+          billingCycle={billingCycle}
+          plans={plans[billingCycle]}
+          selectedPlan={selectedPlan}
+          onSelectPlan={setSelectedPlan}
+          units={units}
+        />
+      </PricingContainer>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ import {
   Comment as CommentIcon,
 } from '@mui/icons-material';
 import transparent from '../../assets/images/hi.png';
-import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+// import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import css from './InfinityTextAnimation.module.css';
 
 const InfinityTextAnimation = ({
@@ -25,7 +25,26 @@ const InfinityTextAnimation = ({
   const handleClose = () => setOpen(false);
 
   return (
-    <SectionContainer>
+    <div id="like-section">
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
+        sx={{
+          fontSize: {
+            xs: '1.5rem',
+            sm: '1.8rem',
+            md: '2.5rem',
+          },
+          textAlign: 'center',
+          pt: 12,
+          // mb: 6,
+          color: 'white',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+        }}
+      >
+        Experience the Future of Personal Growth with AIDE
+      </Typography>
       <Box className={css.mainContainer}>
         <Box className={css.circlesRow}>
           <Box className={css.circleWrapper}>
@@ -49,7 +68,6 @@ const InfinityTextAnimation = ({
             sx={{
               borderRadius: '16px',
               border: '1px solid rgba(255, 255, 255, 0.3)',
-
               color: 'white',
               textAlign: 'center',
               padding: '1rem',
@@ -90,6 +108,7 @@ const InfinityTextAnimation = ({
                 className={css.cardButton}
                 onClick={handleOpen}
                 sx={{
+                  borderRadius: 3,
                   mt: 5,
                   color: '#fff',
                   backgroundColor: theme => theme.palette.primary.main,
@@ -196,6 +215,7 @@ const InfinityTextAnimation = ({
             variant="contained"
             className={css.cardButton}
             sx={{
+              borderRadius: 3,
               mt: 2,
               color: '#fff',
               backgroundColor: theme => theme.palette.primary.main,
@@ -209,7 +229,7 @@ const InfinityTextAnimation = ({
           </Button>
         </Box>
       </Modal>
-    </SectionContainer>
+    </div>
   );
 };
 

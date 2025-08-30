@@ -119,12 +119,18 @@ const sections = [
     icon: <LibraryIcon />,
   },
   { id: 216, title: 'Like', link: '#like-section', icon: <LikeIcon /> },
-  { id: 217, title: 'Swiper', link: '#swiper-section', icon: <SwiperIcon /> },
+  { id: 217, title: 'Tools', link: '#tools-section', icon: <SwiperIcon /> },
   {
     id: 218,
-    title: 'Services',
-    link: '#services-section',
+    title: 'Prices',
+    link: '#prices-section',
     icon: <ServicesIcon />,
+  },
+  {
+    id: 318,
+    title: 'Plans',
+    link: '#plans-section',
+    icon: <AssignmentIcon />,
   },
   {
     id: 19,

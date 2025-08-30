@@ -16,7 +16,9 @@ const TabsWrapper = styled(Box)(({ theme }) => ({
   transition: theme.transitions.create('box-shadow'),
 }));
 
-const TabButton = styled(Button)(({ theme, isActive }) => ({
+const TabButton = styled(Button, {
+  shouldForwardProp: prop => prop !== 'isActive',
+})(({ theme, isActive }) => ({
   flexGrow: 1,
   background: 'none',
   color: isActive
@@ -41,7 +43,9 @@ const TabButton = styled(Button)(({ theme, isActive }) => ({
   },
 }));
 
-const TabText = styled(Box)(({ theme, isActive }) => ({
+const TabText = styled(Box, {
+  shouldForwardProp: prop => prop !== 'isActive',
+})(({ theme, isActive }) => ({
   display: 'inline-block',
   transition: theme.transitions.create('transform', {
     duration: theme.transitions.duration.standard,

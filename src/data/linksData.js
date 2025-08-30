@@ -14,17 +14,22 @@ const linkSections = [
   },
   {
     title: 'Support',
-    links: ['#contacts-section', '#services-section', '#options-section'],
-    subtitle: ['Contacts', 'Services', 'Options'],
+    links: ['#contacts-section', '#prices-section', '#plans-section'],
+    subtitle: ['Contacts', 'Prices', 'Plans'],
   },
   {
     title: 'Services',
-    links: ['#home-section', '#library-section', '#swiper-section'],
-    subtitle: ['Home', 'Library', 'Swiper'],
+    links: [
+      '#home-section',
+      '#options-section',
+      '#library-section',
+      '#tools-section',
+    ],
+    subtitle: ['Home', 'Options', 'Library', 'Tools'],
   },
   {
     title: 'Showcase',
-    links: ['#reviews-section', '#like-section', '#questions'],
+    links: ['#reviews-section', '#like-section', '#questions-section'],
     subtitle: ['Reviews', 'Like', 'Questions'],
   },
 ];

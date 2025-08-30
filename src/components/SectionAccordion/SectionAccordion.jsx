@@ -22,6 +22,8 @@ function SectionAccordion() {
             },
             textAlign: 'center',
             mb: 6,
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
           }}
         >
           "Frequently Asked Questions"

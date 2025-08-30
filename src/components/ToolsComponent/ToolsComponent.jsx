@@ -32,7 +32,26 @@ const Scroller = styled(Box)(() => ({
 
 const ToolsComponet = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id="tools-section">
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
+        sx={{
+          fontSize: {
+            xs: '1.5rem',
+            sm: '1.8rem',
+            md: '2.5rem',
+          },
+          textAlign: 'center',
+          pt: 14,
+          mb: 12,
+          color: 'white',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+        }}
+      >
+        Additional Tools
+      </Typography>
       <Box
         sx={{
           width: '100%',

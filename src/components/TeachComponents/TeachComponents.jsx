@@ -52,7 +52,11 @@ const TeachComponents = () => {
                 <Typography
                   variant="caption"
                   display="block"
-                  sx={{ mt: 1, whiteSpace: 'normal' }}
+                  sx={{
+                    mt: 1,
+                    whiteSpace: 'normal',
+                    color: 'white',
+                  }}
                 >
                   {item.name}
                 </Typography>

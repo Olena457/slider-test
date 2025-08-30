@@ -17,12 +17,6 @@ export const toolsIcons = [
     logo: redux,
     link: 'https://redux.js.org/',
   },
-  {
-    id: 7,
-    name: 'Material',
-    logo: material,
-    link: 'https://mui.com/',
-  },
 
   {
     id: 5,
@@ -30,6 +24,13 @@ export const toolsIcons = [
     logo: router,
     link: 'https://reactrouter.com/',
   },
+  {
+    id: 7,
+    name: 'Material',
+    logo: material,
+    link: 'https://mui.com/',
+  },
+
   {
     id: 3,
     name: 'Vite',

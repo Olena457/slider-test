@@ -11,13 +11,15 @@ const Utils = {
     }).format(n),
 };
 
-const PricingCardStyled = styled(Paper)(({ theme, isSelected }) => ({
+const PricingCardStyled = styled(Paper, {
+  shouldForwardProp: prop => prop !== 'isSelected',
+})(({ theme, isSelected }) => ({
   borderRadius: '16px',
   boxShadow: `inset 0 0 0 1px ${
     isSelected
       ? theme.palette.primary.main
       : theme.palette.mode === 'light'
-      ? theme.palette.grey[200]
+      ? theme.palette.grey[400]
       : theme.palette.grey[800]
   }`,
 

@@ -35,62 +35,83 @@ const FormComponent = () => {
   };
 
   return (
-    <Container
-      component={Paper}
-      elevation={3}
-      sx={{ p: 4, mt: 4, borderRadius: 3 }}
-    >
-      <Typography variant="h4" gutterBottom color="primary">
-        Add new item
-      </Typography>
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
+    <div id="prices-section">
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 2,
+          fontSize: {
+            xs: '1.5rem',
+            sm: '1.8rem',
+            md: '2.5rem',
+          },
+          textAlign: 'center',
+          mb: 6,
+          color: 'white',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
         }}
       >
-        <TextField
-          label="Name"
-          variant="outlined"
-          fullWidth
-          value={name}
-          onChange={e => dispatch(changeName(e.target.value))}
-        />
-        <TextField
-          label="Amount"
-          variant="outlined"
-          fullWidth
-          type="number"
-          value={amount}
-          onChange={e => dispatch(changeAmount(e.target.value))}
-        />
-        <TextField
-          label="Price"
-          variant="outlined"
-          fullWidth
-          type="number"
-          value={price}
-          onChange={e => dispatch(changePrice(e.target.value))}
-        />
-        <Button
-          type="submit"
-          variant="contained"
+        Your App Market
+      </Typography>
+      <Container
+        component={Paper}
+        elevation={3}
+        sx={{ p: 4, mt: 4, borderRadius: 3 }}
+      >
+        <Typography variant="h4" gutterBottom color="primary">
+          Add new item
+        </Typography>
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
           sx={{
-            color: '#fff',
-            backgroundColor: theme => theme.palette.primary.main,
-            '&:hover': {
-              backgroundColor: theme => theme.palette.primary.main,
-              color: '#000',
-            },
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
           }}
         >
-          Add Item
-        </Button>
-      </Box>
-    </Container>
+          <TextField
+            label="Name"
+            variant="outlined"
+            fullWidth
+            value={name}
+            onChange={e => dispatch(changeName(e.target.value))}
+          />
+          <TextField
+            label="Amount"
+            variant="outlined"
+            fullWidth
+            type="number"
+            value={amount}
+            onChange={e => dispatch(changeAmount(e.target.value))}
+          />
+          <TextField
+            label="Price"
+            variant="outlined"
+            fullWidth
+            type="number"
+            value={price}
+            onChange={e => dispatch(changePrice(e.target.value))}
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            sx={{
+              borderRadius: '16px',
+              color: '#fff',
+              backgroundColor: theme => theme.palette.primary.main,
+              '&:hover': {
+                backgroundColor: theme => theme.palette.primary.main,
+                color: '#000',
+              },
+            }}
+          >
+            Add Item
+          </Button>
+        </Box>
+      </Container>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ import SectionContainer from '../SectionContainer/SectionContainer';
 import LibraryList from '../LibraryList/LibraryList.jsx';
 import TeachComponents from '../TeachComponents/TeachComponents.jsx';
 import ToolsComponet from '../ToolsComponent/ToolsComponent.jsx';
-import FloatingComponent from '../FloatigComponent/FloatingComponent.jsx';
+import FloatingComponent from '../FloatignComponent/FloatingComponent.jsx';
 import FormComponent from '../../components/FormComponent/FormComponent.jsx';
 import ItemsList from '../../components/ItemList/ItemList.jsx';
 import InfinityTextAnimation from '../../components/InfinityTextAnimation/InfinityTextAnimantion.jsx';
@@ -26,7 +26,7 @@ const WrapperComponent = () => {
           <div className={css.sliderContent}>
             <div className={css.titleContainer}>
               <Typography
-                variant="h3"
+                variant="h4"
                 component="h2"
                 gutterBottom
                 sx={{
@@ -36,10 +36,12 @@ const WrapperComponent = () => {
                     md: '2.5rem',
                   },
                   textAlign: 'center',
-                  mb: '1rem',
+                  mb: 6,
+                  color: 'white',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
                 }}
               >
-                Don't waste your time and energy.
+                Start your journey to success today!
               </Typography>
             </div>
             <CardsSlider cards={cards} />
