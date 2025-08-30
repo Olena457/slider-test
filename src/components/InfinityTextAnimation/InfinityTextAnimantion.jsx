@@ -12,7 +12,7 @@ import {
   Comment as CommentIcon,
 } from '@mui/icons-material';
 import transparent from '../../assets/images/hi.png';
-// import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import css from './InfinityTextAnimation.module.css';
 
 const InfinityTextAnimation = ({
@@ -25,7 +25,7 @@ const InfinityTextAnimation = ({
   const handleClose = () => setOpen(false);
 
   return (
-    <div id="like-section">
+    <SectionContainer id="like-section" py={{ sx: 2, xs: 3, md: 8 }}>
       <Typography
         variant="h4"
         component="h2"
@@ -37,8 +37,13 @@ const InfinityTextAnimation = ({
             md: '2.5rem',
           },
           textAlign: 'center',
-          pt: 12,
+          // pt: 12,
           // mb: 6,
+          pt: {
+            xs: 3,
+            md: 6,
+            lg: 12,
+          },
           color: 'white',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
         }}
@@ -67,6 +72,18 @@ const InfinityTextAnimation = ({
             elevation={3}
             sx={{
               borderRadius: '16px',
+              marginBottom: '2.2rem',
+              background: `linear-gradient(
+      75deg,
+      #4a93ff,
+      #00aef6,
+      #00c3e5,
+      #00d7d8,
+      #00ebc3,
+      #28ff90,
+      #b4ff72,
+      #f9ff28
+    )`,
               border: '1px solid rgba(255, 255, 255, 0.3)',
               color: 'white',
               textAlign: 'center',
@@ -229,7 +246,7 @@ const InfinityTextAnimation = ({
           </Button>
         </Box>
       </Modal>
-    </div>
+    </SectionContainer>
   );
 };
 

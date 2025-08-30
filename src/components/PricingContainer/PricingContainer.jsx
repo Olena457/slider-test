@@ -47,7 +47,16 @@ const PricingComponent = () => {
       >
         Pick the plan that fits you!
       </Typography>
-      <PricingContainer borderRadius="16px">
+      <PricingContainer
+        borderRadius="16px"
+        sx={{
+          p: {
+            xs: 2,
+            sm: 3,
+            md: 6,
+          },
+        }}
+      >
         <Typography
           variant="h4"
           color="primary"

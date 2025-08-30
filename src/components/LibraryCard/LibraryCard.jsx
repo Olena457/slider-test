@@ -87,7 +87,7 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
           gutterBottom
           variant="h5"
           component="div"
-          sx={{ fontWeight: 'bold', color: '#69a7e8' }}
+          sx={{ fontWeight: 'bold', color: '#2193b0' }}
         >
           {item.title}
         </Typography>
@@ -123,7 +123,7 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
           justifyContent: 'space-between',
           p: 0,
           pt: 2,
-          borderTop: '1px solid #69a7e8',
+          borderTop: '1px solid #2193b0',
           mt: 'auto',
         }}
       >

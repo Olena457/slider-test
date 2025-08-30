@@ -110,7 +110,7 @@ const AdvantagesComponent = () => {
                   bottom: '10px',
                   borderRadius: '10px',
                   pointerEvents: 'none',
-                  border: '1px solid #69a7e8',
+                  border: '1px solid #2193b0',
                 },
               }}
             >
@@ -123,7 +123,7 @@ const AdvantagesComponent = () => {
                         xs: 'scale(1.1)',
                       },
                       '& .MuiSvgIcon-root': {
-                        color: 'secondary.main',
+                        color: 'primary.main',
                       },
                     }}
                   />

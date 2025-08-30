@@ -1,11 +1,12 @@
 import { ThemeProvider } from '@mui/material/styles';
-
 import myCustomTheme from './theme.js';
 import Header from './components/Header/Header.jsx';
 import WrapperComponent from './components/WrapperComponent/WrapperComponent.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import SectionContainer from './components/SectionContainer/SectionContainer.jsx';
+
 import './App.css';
+import HomeButton from './components/HomeButton/HomeButton.jsx';
 
 function App() {
   // const handleScrollToSection = id => {
@@ -30,6 +31,7 @@ function App() {
         >
           <Footer />
         </SectionContainer>
+        <HomeButton />
       </ThemeProvider>
     </>
   );

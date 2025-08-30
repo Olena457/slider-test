@@ -84,17 +84,42 @@ const PricingCard = ({ plan, unit, isSelected, onSelect }) => {
               marginBottom: '2em',
             }}
           >
+            {/* <Typography
+              variant="h3"
+              color="#2193b0"
+              sx={{ fontSize: '3em', lineHeight: 1 }}
+            > */}
             <Typography
               variant="h3"
-              color="#1a73e8"
-              sx={{ fontSize: '3em', lineHeight: 1 }}
+              color="#2193b0"
+              sx={{
+                fontSize: {
+                  xs: '1.8em',
+                  sm: '2.2em',
+                  md: '3em',
+                },
+                lineHeight: 1,
+              }}
             >
               {plan.name}
             </Typography>
+            {/* <Typography
+              variant="h3"
+              color="#2193b0"
+              sx={{ marginLeft: 'auto', fontSize: '3em', lineHeight: 1 }}
+            > */}
             <Typography
               variant="h3"
-              color="#1a73e8"
-              sx={{ marginLeft: 'auto', fontSize: '3em', lineHeight: 1 }}
+              color="#2193b0"
+              sx={{
+                marginLeft: 'auto',
+                fontSize: {
+                  xs: '1.8em',
+                  sm: '2.2em',
+                  md: '3em',
+                },
+                lineHeight: 1,
+              }}
             >
               {priceFormatted}
               {!!plan.price && (

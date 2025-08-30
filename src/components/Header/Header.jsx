@@ -130,7 +130,7 @@ const sections = [
     id: 318,
     title: 'Plans',
     link: '#plans-section',
-    icon: <AssignmentIcon />,
+    icon: <AnalyticsIcon />,
   },
   {
     id: 19,
@@ -484,10 +484,8 @@ const Header = () => {
               },
             }}
           >
-            <ListItemIcon>
-              <LanguageIcon sx={{ pl: 3 }} />
-            </ListItemIcon>
-            <ListItemText primary="Language" />
+            {/* <ListItemIcon><LanguageIcon sx={{ pl: 3 }} /></ListItemIcon>
+            <ListItemText primary="Language" /> */}
           </ListItemButton>
         </List>
       </Box>
@@ -556,7 +554,7 @@ const Header = () => {
               display: 'flex',
               alignItems: 'center',
               flexGrow: 1,
-              pr: 6,
+              pr: 3,
               ml: 3,
               justifyContent: 'flex-end',
             }}
@@ -571,22 +569,22 @@ const Header = () => {
               display: 'flex',
               alignItems: 'center',
               flexGrow: 1,
-              pr: 6,
+              pr: 3,
               justifyContent: 'flex-end',
             }}
           >
             {desktopNav}
-            <Box sx={{ display: 'flex', marginRight: 3, alignItems: 'center' }}>
+            {/* add logick languages _________________here */}
+            {/* <Box sx={{ display: 'flex', marginRight: 3, alignItems: 'center' }}>
               <IconButton
                 edge="end"
                 onClick={() => {
-                  /* add language switching logic here___________________________ */
                 }}
                 color="white"
               >
                 <LanguageIcon />
               </IconButton>
-            </Box>
+            </Box> */}
           </Box>
         )}
       </Toolbar>

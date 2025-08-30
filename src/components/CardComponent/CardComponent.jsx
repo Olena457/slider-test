@@ -19,7 +19,7 @@ const CardComponent = ({ card }) => {
           className={css.customerPhoto}
         />
         <div className={css.containerText}>
-          <h4 className={css.name}>{card.initials}</h4>
+          <h6 className={css.name}>{card.initials}</h6>
           <p className={css.company}>{card.company}</p>
         </div>
       </div>

@@ -8,7 +8,9 @@ const Container = styled(Box)({
   display: 'grid',
   placeItems: 'center',
   textAlign: 'center',
-  color: '#fff',
+  // color: '#fff',
+  color: '#00c3e5',
+
   fontSize: '110px',
   '@media (max-width: 767px)': {
     fontSize: '70px',
@@ -34,6 +36,7 @@ const LayeredText = styled(Box)({
   position: 'relative',
   fontFamily: 'Montserrat, sans-serif',
   fontWeight: 800,
+
   animation: 'wobble 27s infinite linear',
 
   '& span': {
@@ -56,18 +59,18 @@ const LayeredText = styled(Box)({
     color: 'hsl(200 30% calc(var(--n) * 80% + 20%))',
   },
 
-  //   '@keyframes wobble': {
-  //     from: { transform: 'rotate(0deg) rotateX(30deg) rotate(360deg)' },
-  //     to: { transform: 'rotate(360deg) rotateX(30deg) rotate(0deg)' },
-  //   },
-  //   '@keyframes hover': {
-  //     from: { transform: 'translateZ(0.3em)' },
-  //     to: { transform: 'translateZ(0.6em)' },
-  //   },
-  //   '@keyframes shadow': {
-  //     from: { textShadow: '0 0 0.1em #000' },
-  //     to: { textShadow: '0 0 0.2em #000' },
-  //   },
+  // '@keyframes wobble': {
+  //   from: { transform: 'rotate(0deg) rotateX(30deg) rotate(360deg)' },
+  //   to: { transform: 'rotate(360deg) rotateX(30deg) rotate(0deg)' },
+  // },
+  // '@keyframes hover': {
+  //   from: { transform: 'translateZ(0.3em)' },
+  //   to: { transform: 'translateZ(0.6em)' },
+  // },
+  // '@keyframes shadow': {
+  //   from: { textShadow: '0 0 0.1em #000' },
+  //   to: { textShadow: '0 0 0.2em #000' },
+  // },
 });
 
 const FloatingTextComponent = () => {

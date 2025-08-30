@@ -1,3 +1,263 @@
+// import Accordion from '@mui/material/Accordion';
+// import AccordionSummary from '@mui/material/AccordionSummary';
+// import AccordionDetails from '@mui/material/AccordionDetails';
+// import Typography from '@mui/material/Typography';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import SectionContainer from '../SectionContainer/SectionContainer.jsx';
+// import { Box } from '@mui/material';
+
+// function SectionAccordion() {
+//   return (
+//     <>
+//       <SectionContainer id="questions-section">
+//         <Typography
+//           variant="h4"
+//           component="h2"
+//           gutterBottom
+//           sx={{
+//             fontSize: {
+//               xs: '1.5rem',
+//               sm: '1.8rem',
+//               md: '2.5rem',
+//             },
+//             textAlign: 'center',
+//             mb: 6,
+//             color: 'white',
+//             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+//           }}
+//         >
+//           "Frequently Asked Questions"
+//         </Typography>
+
+//         <Box
+//           sx={{
+//             px: {
+//               xs: '10px',
+//               sm: '30px',
+//               md: '60px',
+//               lg: '75px',
+//               xl: '85px',
+//             },
+//           }}
+//         >
+//           {/* Section 1 */}
+//           <Accordion
+//             sx={{
+//               minWidth: { xs: 250 },
+//               maxWidth: { xs: '100%', sm: '100%' },
+//               mx: 'auto',
+//             }}
+//           >
+//             <AccordionSummary
+//               expandIcon={
+//                 <ExpandMoreIcon
+//                   sx={{
+//                     color: '#2193b0',
+//                   }}
+//                 />
+//               }
+//               aria-controls="panel1a-content"
+//               id="panel1a-header"
+//               sx={{
+//                 minHeight: '64px',
+//                 '&.Mui-expanded': {
+//                   minHeight: '64px',
+//                 },
+//                 '@media (min-width: 768px)': {
+//                   minHeight: '80px',
+//                   '&.Mui-expanded': {
+//                     minHeight: '80px',
+//                   },
+//                 },
+//               }}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontSize: {
+//                     xs: '1.5rem',
+//                     sm: '2rem',
+//                     md: '2.5rem',
+//                   },
+//                   fontWeight: '900',
+//                   width: '100%',
+//                   textAlign: 'center',
+//                   color: '#0083b0',
+//                   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+//                 }}
+//               >
+//                 Заголовок 1
+//               </Typography>
+//             </AccordionSummary>
+//             <AccordionDetails>
+//               <Typography>Текст 1 секції акордеона.</Typography>
+//             </AccordionDetails>
+//           </Accordion>
+
+//           {/* Section 2 */}
+//           <Accordion
+//             sx={{
+//               minWidth: { xs: 250 },
+//               maxWidth: { xs: '100%', sm: '100%' },
+//               mx: 'auto',
+//             }}
+//           >
+//             <AccordionSummary
+//               expandIcon={
+//                 <ExpandMoreIcon
+//                   sx={{
+//                     color: '#2193b0',
+//                   }}
+//                 />
+//               }
+//               aria-controls="panel2a-content"
+//               id="panel2a-header"
+//               sx={{
+//                 minHeight: '64px',
+//                 '&.Mui-expanded': {
+//                   minHeight: '64px',
+//                 },
+//                 '@media (min-width: 768px)': {
+//                   minHeight: '80px',
+//                   '&.Mui-expanded': {
+//                     minHeight: '80px',
+//                   },
+//                 },
+//               }}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontSize: {
+//                     xs: '1.5rem',
+//                     sm: '2rem',
+//                     md: '2.5rem',
+//                   },
+//                   fontWeight: '900',
+//                   width: '100%',
+//                   textAlign: 'center',
+//                   color: '#0083b0',
+//                   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+//                 }}
+//               >
+//                 Заголовок 2
+//               </Typography>
+//             </AccordionSummary>
+//             <AccordionDetails>
+//               <Typography>вміст 1 секції.</Typography>
+//             </AccordionDetails>
+//           </Accordion>
+
+//           {/* Section 3 */}
+//           <Accordion
+//             sx={{
+//               minWidth: { xs: 250 },
+//               maxWidth: { xs: '100%', sm: '100%' },
+//               mx: 'auto',
+//             }}
+//           >
+//             <AccordionSummary
+//               expandIcon={
+//                 <ExpandMoreIcon
+//                   sx={{
+//                     color: '#2193b0',
+//                   }}
+//                 />
+//               }
+//               aria-controls="panel3a-content"
+//               id="panel3a-header"
+//               sx={{
+//                 minHeight: '64px',
+//                 '&.Mui-expanded': {
+//                   minHeight: '64px',
+//                 },
+//                 '@media (min-width: 768px)': {
+//                   minHeight: '80px',
+//                   '&.Mui-expanded': {
+//                     minHeight: '80px',
+//                   },
+//                 },
+//               }}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontSize: {
+//                     xs: '1.5rem',
+//                     sm: '2rem',
+//                     md: '2.5rem',
+//                   },
+//                   fontWeight: '900',
+//                   width: '100%',
+//                   textAlign: 'center',
+//                   color: '#0083b0',
+//                   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+//                 }}
+//               >
+//                 Заголовок 3
+//               </Typography>
+//             </AccordionSummary>
+//             <AccordionDetails>
+//               <Typography>Текст 3 акордеона.</Typography>
+//             </AccordionDetails>
+//           </Accordion>
+
+//           {/* Section 4 */}
+//           <Accordion
+//             sx={{
+//               minWidth: { xs: 250 },
+//               maxWidth: { xs: '100%', sm: '100%' },
+//               mx: 'auto',
+//             }}
+//           >
+//             <AccordionSummary
+//               expandIcon={
+//                 <ExpandMoreIcon
+//                   sx={{
+//                     color: '#2193b0',
+//                   }}
+//                 />
+//               }
+//               aria-controls="panel4a-content"
+//               id="panel4a-header"
+//               sx={{
+//                 minHeight: '64px',
+//                 '&.Mui-expanded': {
+//                   minHeight: '64px',
+//                 },
+//                 '@media (min-width: 768px)': {
+//                   minHeight: '80px',
+//                   '&.Mui-expanded': {
+//                     minHeight: '80px',
+//                   },
+//                 },
+//               }}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontSize: {
+//                     xs: '1.5rem',
+//                     sm: '2rem',
+//                     md: '2.5rem',
+//                   },
+//                   fontWeight: '900',
+//                   width: '100%',
+//                   textAlign: 'center',
+//                   color: '#0083b0',
+//                   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+//                 }}
+//               >
+//                 Заголовок 4
+//               </Typography>
+//             </AccordionSummary>
+//             <AccordionDetails>
+//               <Typography>Текст 4 елементи</Typography>
+//             </AccordionDetails>
+//           </Accordion>
+//         </Box>
+//       </SectionContainer>
+//     </>
+//   );
+// }
+
+// export default SectionAccordion;
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -49,7 +309,13 @@ function SectionAccordion() {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{
+                    color: '#2193b0',
+                  }}
+                />
+              }
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{
@@ -65,12 +331,37 @@ function SectionAccordion() {
                 },
               }}
             >
-              <Typography sx={{ width: '100%', textAlign: 'center' }}>
-                Заголовок 1
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1.2rem',
+                    sm: '1.5rem',
+                    md: '1.8rem',
+                  },
+                  fontWeight: '900',
+                  width: '100%',
+                  textAlign: 'center',
+                  color: '#0083b0',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+                }}
+              >
+                What AI tools are included in the app?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Текст 1 секції акордеона.</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1rem',
+                    sm: '1.1rem',
+                    md: '1.2rem',
+                  },
+                }}
+              >
+                Our app features a variety of AI tools, including text
+                generation, image recognition, and data analytics to streamline
+                your workflow.
+              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -83,7 +374,13 @@ function SectionAccordion() {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{
+                    color: '#2193b0',
+                  }}
+                />
+              }
               aria-controls="panel2a-content"
               id="panel2a-header"
               sx={{
@@ -99,12 +396,37 @@ function SectionAccordion() {
                 },
               }}
             >
-              <Typography sx={{ width: '100%', textAlign: 'center' }}>
-                Заголовок 2
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1.2rem',
+                    sm: '1.5rem',
+                    md: '1.8rem',
+                  },
+                  fontWeight: '900',
+                  width: '100%',
+                  textAlign: 'center',
+                  color: '#0083b0',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+                }}
+              >
+                How can I get started with the AI tools?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>вміст 1 секції.</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1rem',
+                    sm: '1.1rem',
+                    md: '1.2rem',
+                  },
+                }}
+              >
+                Simply sign up, and you'll find an intuitive dashboard with
+                tutorials and examples to help you start using our AI features
+                right away.
+              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -117,7 +439,13 @@ function SectionAccordion() {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{
+                    color: '#2193b0',
+                  }}
+                />
+              }
               aria-controls="panel3a-content"
               id="panel3a-header"
               sx={{
@@ -133,12 +461,37 @@ function SectionAccordion() {
                 },
               }}
             >
-              <Typography sx={{ width: '100%', textAlign: 'center' }}>
-                Заголовок 3
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1.2rem',
+                    sm: '1.5rem',
+                    md: '1.8rem',
+                  },
+                  fontWeight: '900',
+                  width: '100%',
+                  textAlign: 'center',
+                  color: '#0083b0',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+                }}
+              >
+                Is my data secure when using the app?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Текст 3 акордеона.</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1rem',
+                    sm: '1.1rem',
+                    md: '1.2rem',
+                  },
+                }}
+              >
+                Yes, we prioritize your data security. All data is encrypted and
+                processed in compliance with privacy regulations to ensure your
+                information is safe.
+              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -151,7 +504,13 @@ function SectionAccordion() {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{
+                    color: '#2193b0',
+                  }}
+                />
+              }
               aria-controls="panel4a-content"
               id="panel4a-header"
               sx={{
@@ -167,12 +526,37 @@ function SectionAccordion() {
                 },
               }}
             >
-              <Typography sx={{ width: '100%', textAlign: 'center' }}>
-                Заголовок 4
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1.2rem',
+                    sm: '1.5rem',
+                    md: '1.8rem',
+                  },
+                  fontWeight: '900',
+                  width: '100%',
+                  textAlign: 'center',
+                  color: '#0083b0',
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+                }}
+              >
+                What integrations are available?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Текст 4 елементи</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1rem',
+                    sm: '1.1rem',
+                    md: '1.2rem',
+                  },
+                }}
+              >
+                Our platform supports seamless integrations with popular
+                services through our robust API, allowing you to connect and
+                automate your tasks easily.
+              </Typography>
             </AccordionDetails>
           </Accordion>
         </Box>

@@ -81,6 +81,7 @@
 
 .icon {
   display: block;
+  color: #4d535b;
   margin-left: auto;
   margin-top: 30px;
   width: 20px;
@@ -109,8 +110,9 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 3px solid #4a93ff;
-  box-shadow: 0 0 10px 5px rgba(74, 147, 255, 0.75);
+  border: 3px solid #2193b0;
+  box-shadow: 0 0 10px 5px;
+  box-shadow: 0 0 10px 5px #2193b0;
 }
 
 @media (min-width: 480px) {
@@ -191,7 +193,7 @@
   line-height: 1.2;
 }
 .company {
-  color: #4a93ff;
+  color: #2193b0;
   line-height: 1.2;
   font-size: 16px;
   font-weight: 500;
@@ -211,12 +213,12 @@
 @media (min-width: 768px) {
   .name {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.25;
   }
   .company {
     line-height: 1.25;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 }

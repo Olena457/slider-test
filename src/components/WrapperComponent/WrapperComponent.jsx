@@ -12,6 +12,8 @@ import FormComponent from '../../components/FormComponent/FormComponent.jsx';
 import ItemsList from '../../components/ItemList/ItemList.jsx';
 import InfinityTextAnimation from '../../components/InfinityTextAnimation/InfinityTextAnimantion.jsx';
 import PricingContainer from '../../components/PricingContainer/PricingContainer.jsx';
+
+import HomeButton from '../../components/HomeButton/HomeButton.jsx';
 import css from './WrapperComponent.module.css';
 
 const WrapperComponent = () => {
@@ -59,6 +61,7 @@ const WrapperComponent = () => {
       </Container>
       <ToolsComponet />
       <PricingContainer />
+      <HomeButton />
       <InfinityTextAnimation text="AIDE  PERSONAL DEVELOPMENT ENGINE" />
     </>
   );
