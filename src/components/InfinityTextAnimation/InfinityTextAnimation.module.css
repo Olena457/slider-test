@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 20px; */
   flex-direction: column;
 }
 
@@ -33,7 +32,6 @@
   transform: translate(-50%, -90%);
   width: 40vh;
   height: 40vh;
-  /* z-index: 5; */
 }
 @media (min-width: 768px) {
   .infinityTextWrapper {
@@ -59,7 +57,6 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  /* border: 1px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +67,7 @@
 }
 
 .aideText {
+  font-size: 68px;
   color: white;
   font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -124,14 +122,14 @@
     rotate(calc(360deg / var(--total-chars) * var(--char-index)));
 }
 
-/* @keyframes spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
 .aideText {
   font-size: 1rem;
 }

@@ -15,19 +15,19 @@ import SectionContainer from '../SectionContainer/SectionContainer';
 const Scroller = styled(Box)(() => ({
   display: 'inline-flex',
   gap: '16px',
-  //   animation: 'scroll-left 100s linear infinite', // duration to control speed
+  animation: 'scroll-left 100s linear infinite', // duration to control speed
   '&:hover': {
     animationPlayState: 'paused',
   },
 
-  //   '@keyframes scroll-left': {
-  //     '0%': {
-  //       transform: 'translateX(0%)',
-  //     },
-  //     '100%': {
-  //       transform: 'translateX(-100%)',
-  //     },
-  //   },
+  '@keyframes scroll-left': {
+    '0%': {
+      transform: 'translateX(0%)',
+    },
+    '100%': {
+      transform: 'translateX(-100%)',
+    },
+  },
 }));
 
 const ToolsComponet = () => {
@@ -65,11 +65,17 @@ const ToolsComponet = () => {
         <Scroller>
           {cardData.map((card, index) => (
             <Box
-              key={`card-${index}-1`}
+              key={`card-${index}-2`}
               sx={{
                 flexShrink: 0,
-                width: 350,
-                minWidth: 350,
+                width: {
+                  xs: 280,
+                  sm: 350,
+                },
+                minWidth: {
+                  xs: 280,
+                  sm: 350,
+                },
               }}
             >
               <Card
@@ -161,8 +167,14 @@ const ToolsComponet = () => {
               key={`card-${index}-2`}
               sx={{
                 flexShrink: 0,
-                width: 350,
-                minWidth: 350,
+                width: {
+                  xs: 280,
+                  sm: 350,
+                },
+                minWidth: {
+                  xs: 280,
+                  sm: 350,
+                },
               }}
             >
               <Card
@@ -170,6 +182,8 @@ const ToolsComponet = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
+                  background:
+                    'linear-gradient(to left, #6dd5ed, #2daac9ff, #00b4db, #1188b0ff)',
                   p: 2,
                   boxShadow: 3,
                   borderRadius: 2,

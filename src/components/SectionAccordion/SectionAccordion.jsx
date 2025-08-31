@@ -4,7 +4,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SectionContainer from '../SectionContainer/SectionContainer.jsx';
-import BallComponent from '../../components/BallComponent/BallComponent.jsx';
 
 import { Box } from '@mui/material';
 
@@ -12,7 +11,6 @@ function SectionAccordion() {
   return (
     <>
       <SectionContainer id="questions-section">
-        <BallComponent />
         <Typography
           variant="h4"
           component="h2"

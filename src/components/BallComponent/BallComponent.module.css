@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 250px;
   height: 250px;
 
@@ -30,7 +30,6 @@
 .loader .sphere {
   transform: rotate(calc(var(--rot) * 20deg));
 }
-/* _________________________________ */
 .loader .sphere.sphere1 {
   --bg: #f008;
 }
@@ -49,7 +48,6 @@
 
 .loader .sphere.sphere5 {
   --bg: #0083b0;
-  /* --bg: #0ff8; */
 }
 
 .loader .sphere.sphere6 {
@@ -83,7 +81,6 @@
   }
 }
 
-/* Адаптивні стилі для мобільних та інших пристроїв */
 @media (max-width: 600px) {
   .container,
   .loader,
@@ -102,4 +99,4 @@
     width: 120px;
     height: 120px;
   }
-}
+} */

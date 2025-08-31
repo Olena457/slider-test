@@ -24,6 +24,17 @@ const Footer = () => {
     { icon: LinkedInIcon, url: 'https://www.linkedin.com/in/your-profile' },
   ];
 
+  // Ця функція забезпечує плавний скрол
+  const handleSmoothScroll = (event, sectionId) => {
+    // Зупиняємо стандартну поведінку посилання, щоб уникнути різкого стрибка
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Використовуємо scrollIntoView з опцією 'smooth'
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div id="contacts-section">
       <Box
@@ -141,7 +152,11 @@ const Footer = () => {
                         <Link
                           color={theme.palette.text.primary}
                           key={i}
-                          href={section.links[i] || '#'}
+                          // Використовуємо onClick замість href для плавного скролу
+                          href="#"
+                          onClick={e =>
+                            handleSmoothScroll(e, section.links[i].substring(1))
+                          }
                           underline="hover"
                           display="block"
                           sx={{
@@ -160,7 +175,11 @@ const Footer = () => {
                         <Link
                           color={theme.palette.text.primary}
                           key={i}
-                          href={link}
+                          // Використовуємо onClick замість href для плавного скролу
+                          href="#"
+                          onClick={e =>
+                            handleSmoothScroll(e, link.substring(1))
+                          }
                           underline="hover"
                           display="block"
                           sx={{

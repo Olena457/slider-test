@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import PricingTabs from '../PricingTabs/PricingTabs.jsx';
-import PricingPlans from '../PrisingPlans/PrisingPlans.jsx';
+import PricingPlans from '../PricingPlans/PricingPlans.jsx';
 import plans from '../../data/dataPlans.js';
 
 const PricingContainer = styled(Box)(({ theme }) => ({

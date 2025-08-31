@@ -31,7 +31,6 @@ import {
   AutoAwesomeOutlined as AutomationsIcon,
   PlayCircleOutline as WatchDemoIcon,
   ContactMailOutlined as ContactSalesIcon,
-  // LanguageOutlined as LanguageIcon,
   HomeOutlined as HomeIcon,
   HelpOutlineOutlined as QuestionsIcon,
   RateReviewOutlined as ReviewsIcon,
@@ -458,9 +457,6 @@ const Header = () => {
               return null;
             })}
           <ListItemButton
-            onClick={() => {
-              /* switch language logic add here_________________________________________ */
-            }}
             sx={{
               color: theme.palette.primary.main,
               transition: '0.3s',
@@ -483,10 +479,7 @@ const Header = () => {
                 color: theme.palette.primary.main,
               },
             }}
-          >
-            {/* <ListItemIcon><LanguageIcon sx={{ pl: 3 }} /></ListItemIcon>
-            <ListItemText primary="Language" /> */}
-          </ListItemButton>
+          ></ListItemButton>
         </List>
       </Box>
     </Drawer>
@@ -574,17 +567,6 @@ const Header = () => {
             }}
           >
             {desktopNav}
-            {/* add logick languages _________________here */}
-            {/* <Box sx={{ display: 'flex', marginRight: 3, alignItems: 'center' }}>
-              <IconButton
-                edge="end"
-                onClick={() => {
-                }}
-                color="white"
-              >
-                <LanguageIcon />
-              </IconButton>
-            </Box> */}
           </Box>
         )}
       </Toolbar>

@@ -20,9 +20,8 @@ const WrapperComponent = () => {
     <>
       <FloatingComponent />
       <TeachComponents />
+      <AdvantagesComponent />
       <SectionContainer id="reviews-section" maxWidth="90%" mx="auto">
-        <AdvantagesComponent />
-
         <div className={css.sliderContainer}>
           <div className={css.sliderContent}>
             <div className={css.titleContainer}>

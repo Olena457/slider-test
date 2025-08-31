@@ -50,6 +50,7 @@ const InfinityTextAnimation = ({
       >
         Experience the Future of Personal Growth with AIDE
       </Typography>
+
       <Box className={css.mainContainer}>
         <Box className={css.circlesRow}>
           <Box className={css.circleWrapper}>
@@ -181,6 +182,7 @@ const InfinityTextAnimation = ({
             Free Trial Period
           </Typography>
           <Typography
+            component="div"
             id="modal-modal-description"
             sx={{ mt: 2, textAlign: 'left' }}
           >

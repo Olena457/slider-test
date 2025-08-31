@@ -19,7 +19,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: { xs: '90%', sm: 500 },
   bgcolor: 'background.paper',
-  border: '1px solid #69a7e8',
+  border: '1px solid #0083b0',
   boxShadow: 24,
   p: 4,
   borderRadius: 2,
@@ -94,7 +94,7 @@ const LibraryList = () => {
               id="modal-title"
               variant="h6"
               component="h2"
-              sx={{ mb: 2, color: '#69a7e8' }}
+              sx={{ mb: 2, color: '#0083b0' }}
             >
               {selectedItem?.title}
             </Typography>

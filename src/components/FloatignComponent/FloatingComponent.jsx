@@ -1,6 +1,6 @@
-import hiPhoto from '../../assets/images/hi.png';
 import { Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import hiPhoto from '../../assets/images/hi.png';
 
 const Container = styled(Box)({
   minHeight: '100vh',
@@ -9,11 +9,10 @@ const Container = styled(Box)({
   placeItems: 'center',
   textAlign: 'center',
   color: '#fff',
-  // color: '#00c3e5',
 
   fontSize: '110px',
   '@media (max-width: 767px)': {
-    fontSize: '70px',
+    fontSize: '60px',
   },
   overflow: 'clip',
   position: 'relative',
@@ -26,7 +25,7 @@ const Scene = styled(Box)({
   },
   transform: 'translateY(-200px)',
   '@media (max-width: 767px)': {
-    transform: 'translateY(-120px)',
+    transform: 'translateY(-150px)',
   },
 });
 
@@ -36,6 +35,7 @@ const LayeredText = styled(Box)({
   position: 'relative',
   fontFamily: 'Montserrat, sans-serif',
   fontWeight: 800,
+  lineHeight: 1,
 
   animation: 'wobble 27s infinite linear',
 
@@ -59,18 +59,18 @@ const LayeredText = styled(Box)({
     color: 'hsl(200 30% calc(var(--n) * 80% + 20%))',
   },
 
-  // '@keyframes wobble': {
-  //   from: { transform: 'rotate(0deg) rotateX(30deg) rotate(360deg)' },
-  //   to: { transform: 'rotate(360deg) rotateX(30deg) rotate(0deg)' },
-  // },
-  // '@keyframes hover': {
-  //   from: { transform: 'translateZ(0.3em)' },
-  //   to: { transform: 'translateZ(0.6em)' },
-  // },
-  // '@keyframes shadow': {
-  //   from: { textShadow: '0 0 0.1em #000' },
-  //   to: { textShadow: '0 0 0.2em #000' },
-  // },
+  '@keyframes wobble': {
+    from: { transform: 'rotate(0deg) rotateX(30deg) rotate(360deg)' },
+    to: { transform: 'rotate(360deg) rotateX(30deg) rotate(0deg)' },
+  },
+  '@keyframes hover': {
+    from: { transform: 'translateZ(0.3em)' },
+    to: { transform: 'translateZ(0.6em)' },
+  },
+  '@keyframes shadow': {
+    from: { textShadow: '0 0 0.1em #000' },
+    to: { textShadow: '0 0 0.2em #000' },
+  },
 });
 
 const FloatingTextComponent = () => {
