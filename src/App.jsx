@@ -9,13 +9,6 @@ import './App.css';
 import HomeButton from './components/HomeButton/HomeButton.jsx';
 
 function App() {
-  // const handleScrollToSection = id => {
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //   }
-  // };
-
   return (
     <>
       <ThemeProvider theme={myCustomTheme}>
