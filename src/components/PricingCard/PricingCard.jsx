@@ -84,11 +84,6 @@ const PricingCard = ({ plan, unit, isSelected, onSelect }) => {
               marginBottom: '2em',
             }}
           >
-            {/* <Typography
-              variant="h3"
-              color="#2193b0"
-              sx={{ fontSize: '3em', lineHeight: 1 }}
-            > */}
             <Typography
               variant="h3"
               color="#2193b0"
@@ -103,11 +98,7 @@ const PricingCard = ({ plan, unit, isSelected, onSelect }) => {
             >
               {plan.name}
             </Typography>
-            {/* <Typography
-              variant="h3"
-              color="#2193b0"
-              sx={{ marginLeft: 'auto', fontSize: '3em', lineHeight: 1 }}
-            > */}
+
             <Typography
               variant="h3"
               color="#2193b0"

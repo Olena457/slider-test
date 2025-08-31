@@ -42,20 +42,6 @@ const LibraryList = () => {
   return (
     <div id="library-section">
       <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
-        {/* <Typography
-          variant="h4"
-          mb={6}
-          component="h2"
-          gutterBottom
-          sx={{
-            fontSize: {
-              xs: '1.5rem',
-              sm: '1.8rem',
-              md: '2.5rem',
-            },
-            textAlign: 'center',
-          }}
-        > */}
         <Typography
           variant="h4"
           component="h2"

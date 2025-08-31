@@ -19,8 +19,6 @@ const WrapperComponent = () => {
   return (
     <>
       <FloatingComponent />
-      {/* <BallComponent /> */}
-
       <TeachComponents />
       <SectionContainer id="reviews-section" maxWidth="90%" mx="auto">
         <AdvantagesComponent />

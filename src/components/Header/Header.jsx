@@ -31,7 +31,7 @@ import {
   AutoAwesomeOutlined as AutomationsIcon,
   PlayCircleOutline as WatchDemoIcon,
   ContactMailOutlined as ContactSalesIcon,
-  LanguageOutlined as LanguageIcon,
+  // LanguageOutlined as LanguageIcon,
   HomeOutlined as HomeIcon,
   HelpOutlineOutlined as QuestionsIcon,
   RateReviewOutlined as ReviewsIcon,

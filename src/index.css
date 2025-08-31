@@ -4,17 +4,6 @@
   --gray-color: #b6b1b1;
   --black-color: #000000;
   --white-color: #ffff;
-  --body-color: conic-gradient(
-    from 75deg at 70% -10%,
-    #4a93ff,
-    #00b9ff,
-    #00dcf1,
-    #00f8d5,
-    #00ffb0,
-    #00ff84,
-    #9fff55,
-    #f9ff28
-  );
   --transition: 0.3s ease-in-out;
   --box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
     10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
@@ -35,13 +24,6 @@ body {
   min-height: 100vh;
   font-style: normal;
   background: linear-gradient(to right, #6dd5ed, #2193b0, #00b4db, #0083b0);
-
-  /* background: var(--body-color); */
-  /* color: var(--black-color);
-  /* background-image: url('../src/assets/images/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 
 h1,

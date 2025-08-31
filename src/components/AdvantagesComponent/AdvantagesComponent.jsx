@@ -1,6 +1,5 @@
 import { features } from '../../data/featuresData.js';
 import { Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
-// import SectionContainer from '../SectionContainer/SectionContainer.jsx';
 import { useState, useEffect, useRef } from 'react';
 
 const AdvantagesComponent = () => {

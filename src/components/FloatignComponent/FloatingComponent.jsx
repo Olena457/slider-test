@@ -8,8 +8,8 @@ const Container = styled(Box)({
   display: 'grid',
   placeItems: 'center',
   textAlign: 'center',
-  // color: '#fff',
-  color: '#00c3e5',
+  color: '#fff',
+  // color: '#00c3e5',
 
   fontSize: '110px',
   '@media (max-width: 767px)': {
