@@ -24,9 +24,29 @@
 - Слайдери для секцій з відгуками, галереями або партнерами
 - Централізоване керування станом через Redux
 
+* item 1
+* item 2
+  - subitem 2.1
+  - subitem 2.2
+
+> Quoted text
+
+1. item 1
+   1. subitem 1.1
+   1. subitem 1.2
+1. item 2
+   - subitem (you can use unordered subitems too)
+1. item 3
+
+Code example: `print("example")`
+
+[link text](https://www.example.com)
+
+![alt text](address)
+
 ## 🚀 Запуск проєкту
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
