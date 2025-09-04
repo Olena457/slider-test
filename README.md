@@ -39,14 +39,14 @@ developers looking to explore, learn, and stay inspired._
    - Material UI
 2. Animation & Interaction
 
-- 3D animation
-- Framer Motion
-- React Slick
+   - 3D animation
+   - Framer Motion
+   - React Slick
 
-3.  Styling & Layout
+3. Styling & Layout
 
-- Material UI Styled
-- Responsive Grid System
+   - Material UI Styled
+   - Responsive Grid System
 
 ---
 
