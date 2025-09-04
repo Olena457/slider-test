@@ -34,16 +34,19 @@ developers looking to explore, learn, and stay inspired._
 ## Technologies Used
 
 1. Core Stack
-   1. React + Vite
-   1. Redux Toolkit + Redux Persist
-   1. Material UI
-1. Animation & Interaction
-   - 3D animation
-   - Framer Motion
-   - React Slick
-1. Styling & Layout
-   - Material UI Styled
-   - Responsive Grid System
+   - React + Vite
+   - Redux Toolkit + Redux Persist
+   - Material UI
+2. Animation & Interaction
+
+- 3D animation
+- Framer Motion
+- React Slick
+
+3.  Styling & Layout
+
+- Material UI Styled
+- Responsive Grid System
 
 ---
 
