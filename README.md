@@ -77,7 +77,23 @@ The app includes a section with curated links to:
 
   ***
 
-To get started with the project, clone the repository using
-`git clone https://github.com/username/slider-test.git`, then navigate into the
-project folder with `cd slider-test`. Install all dependencies by running
-`npm install`, and finally start the development server using `npm run dev`.
+## Getting Started
+
+_To set up the project locally, follow these steps:_
+
+1. _Clone the repository_  
+   To get started with the project, clone the repository using
+
+   `git clone https://github.com/username/slider-test.git `
+
+2. _Navigate into the project folder with_
+
+`cd slider-test`
+
+3.  _Install all dependencies by running_
+
+`npm install`
+
+4. _Finally start the development server using_
+
+`npm run dev`
