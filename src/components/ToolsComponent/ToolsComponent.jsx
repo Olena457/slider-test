@@ -46,7 +46,7 @@ const ToolsComponet = () => {
           textAlign: 'center',
           pt: 14,
           mb: 12,
-          color: 'white',
+          color: '#f5f5f5',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
         }}
       >
@@ -84,7 +84,7 @@ const ToolsComponet = () => {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   background:
-                    'linear-gradient(to left, #6dd5ed, #2daac9ff, #00b4db, #1188b0ff)',
+                    'linear-gradient(to right, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
                   p: 2,
                   boxShadow: 3,
                   borderRadius: 2,

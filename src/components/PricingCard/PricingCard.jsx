@@ -15,6 +15,7 @@ const PricingCardStyled = styled(Paper, {
   shouldForwardProp: prop => prop !== 'isSelected',
 })(({ theme, isSelected }) => ({
   borderRadius: '16px',
+  background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
   boxShadow: `inset 0 0 0 1px ${
     isSelected
       ? theme.palette.primary.main

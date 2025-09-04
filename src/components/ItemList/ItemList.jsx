@@ -35,7 +35,12 @@ const ItemsList = () => {
     <Container
       component={Paper}
       elevation={3}
-      sx={{ p: 4, mt: 4, borderRadius: 3 }}
+      sx={{
+        p: 4,
+        mt: 4,
+        borderRadius: 3,
+        background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
+      }}
     >
       <Typography variant="h4" gutterBottom color="primary">
         list of items

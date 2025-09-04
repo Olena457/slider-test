@@ -6,10 +6,7 @@ import PricingPlans from '../PricingPlans/PricingPlans.jsx';
 import plans from '../../data/dataPlans.js';
 
 const PricingContainer = styled(Box)(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === 'light'
-      ? theme.palette.common.white
-      : theme.palette.grey[900],
+  background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
   maxWidth: '36em',
   margin: '0 auto',
   padding: '3em',
@@ -41,7 +38,7 @@ const PricingComponent = () => {
           textAlign: 'center',
           pt: 14,
           mb: 14,
-          color: 'white',
+          color: '#F5f5f5',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
         }}
       >
@@ -55,7 +52,7 @@ const PricingComponent = () => {
             sm: 3,
             md: 5,
           },
-          background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
+          background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
         }}
       >
         <Typography

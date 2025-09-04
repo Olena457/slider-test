@@ -44,7 +44,7 @@ const InfinityTextAnimation = ({
             md: 6,
             lg: 12,
           },
-          color: 'white',
+          color: '#f5f5f5',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
         }}
       >
@@ -74,7 +74,7 @@ const InfinityTextAnimation = ({
             sx={{
               borderRadius: '16px',
               marginBottom: '2.2rem',
-              background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
+              background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
               border: '1px solid rgba(255, 255, 255, 0.3)',
               color: 'white',
               textAlign: 'center',
@@ -118,7 +118,7 @@ const InfinityTextAnimation = ({
                 sx={{
                   borderRadius: 3,
                   mt: 5,
-                  color: '#fff',
+                  color: '#f5f5f5',
                   backgroundColor: theme => theme.palette.primary.main,
                   '&:hover': {
                     backgroundColor: theme => theme.palette.primary.dark,
@@ -163,7 +163,7 @@ const InfinityTextAnimation = ({
             left: '50%',
             transform: 'translate(-50%, -50%)',
             width: { xs: '90%', md: 400 },
-            background: `linear-gradient(135deg, #ffffff, #f7f9fc)`,
+            background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
             border: '2px solid #0083b0',
             boxShadow: 24,
             p: 4,

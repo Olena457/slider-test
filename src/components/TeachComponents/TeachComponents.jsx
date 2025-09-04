@@ -6,6 +6,24 @@ const TeachComponents = () => {
   return (
     <div id="home-section">
       <SectionContainer>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          sx={{
+            fontSize: {
+              xs: '1.5rem',
+              sm: '1.8rem',
+              md: '2.5rem',
+            },
+            textAlign: 'center',
+            mb: 6,
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+          }}
+        >
+          "🔗 Learn from Official Sources"
+        </Typography>
         <Box
           sx={{
             overflowX: 'auto',

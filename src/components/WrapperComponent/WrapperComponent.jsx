@@ -37,7 +37,7 @@ const WrapperComponent = () => {
                   },
                   textAlign: 'center',
                   mb: 6,
-                  color: 'white',
+                  color: '#f5f5f5',
                   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
                 }}
               >

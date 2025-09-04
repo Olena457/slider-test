@@ -56,7 +56,8 @@ const LayeredText = styled(Box)({
   '& .layer': {
     '--n': 'calc(var(--i) / var(--layers-count))',
     transform: 'translateZ(calc(var(--i) * var(--layer-offset)))',
-    color: 'hsl(200 30% calc(var(--n) * 80% + 20%))',
+    // color: 'hsl(200 30% calc(var(--n) * 80% + 20%))',
+    color: 'hsl(210, 10%, calc(var(--n) * 40% + 50%))',
   },
 
   '@keyframes wobble': {
@@ -68,8 +69,10 @@ const LayeredText = styled(Box)({
     to: { transform: 'translateZ(0.6em)' },
   },
   '@keyframes shadow': {
-    from: { textShadow: '0 0 0.1em #000' },
-    to: { textShadow: '0 0 0.2em #000' },
+    // from: { textShadow: '0 0 0.1em #000' },
+    // to: { textShadow: '0 0 0.2em #000' },
+    from: { textShadow: '0 0 0.1em rgba(0,0,0,0.7)' },
+    to: { textShadow: '0 0 0.2em rgba(0,0,0,0.5)' },
   },
 });
 

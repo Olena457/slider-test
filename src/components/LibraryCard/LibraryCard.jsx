@@ -26,7 +26,7 @@ const LibraryCard = ({ item, onDescriptionClick }) => {
         display: 'flex',
         flexDirection: 'column',
         padding: '30px 35px 30px 35px',
-        backgroundColor: '#fff',
+        background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
         borderRadius: '30px',
         overflow: 'hidden',
         boxShadow: 4,
