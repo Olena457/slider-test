@@ -1,52 +1,83 @@
 # React + Vite
 
-# AI-tools development
+# 🌐 AIDE-tools development
 
-# 🌐 Landing Page App
+> Built to inspire developers and showcase modern UI/UX techniques.
 
-Це сучасна лендінг-сторінка, створена як демонстраційний додаток з використанням
-популярних бібліотек та фреймворків для React.
+_AIDE_ is a modern React-based landing page that showcases useful AI tools,
+educational resources, and interactive UI components. _This app is perfect for
+developers looking to explore, learn, and stay inspired._
 
-## 🛠️ Використані технології
+---
 
-- **Material UI** — для побудови адаптивного та естетичного інтерфейсу
-- **React Redux** — для керування глобальним станом додатку
-- **React Slick** — для реалізації слайдерів та каруселей
-- **Framer Motion** — для плавної анімації компонентів
-- **React** — як основа для побудови компонентної архітектури
+## Features
 
-## 📦 Особливості
+- 3D animated hero section
+- Interactive cards with:
+  - opacity transitions
+  - horizontal sliding animations
+- Responsive grid layout with animated content blocks
+- Dynamic form to:
+  - add items with price and quantity
+  - calculate total cost and item count
+- Subscription component using `ref` to preserve user selections
+- Mobile-friendly navigation with adaptive menu
+- Section with curated links to official documentation and learning platforms
 
-- 3D анімації
-- Повністю адаптивний дизайн
-- Компонентна структура з використанням Material UI
-- Анімації при скролі та взаємодії з елементами
-- Слайдери для секцій з відгуками, галереями або партнерами
-- Централізоване керування станом через Redux
+* **Responsive slider implemented using React Slick**
+  - Displays content in a carousel format
+  - Fully adapted for various screen sizes and devices
+  - Smooth transitions and customizable settings
 
-* item 1
-* item 2
-  - subitem 2.1
-  - subitem 2.2
+---
 
-> Quoted text
+## Technologies Used
 
-1. item 1
-   1. subitem 1.1
-   1. subitem 1.2
-1. item 2
-   - subitem (you can use unordered subitems too)
-1. item 3
+1. Core Stack
+   1. React + Vite
+   1. Redux Toolkit + Redux Persist
+   1. Material UI
+1. Animation & Interaction
+   - 3D animation
+   - Framer Motion
+   - React Slick
+1. Styling & Layout
+   - Material UI Styled
+   - Responsive Grid System
 
-Code example: `print("example")`
+---
 
-[link text](https://www.example.com)
+## Gallery Preview
 
-![alt text](address)
+<div style="display: flex; flex-wrap: wrap; gap: 15px;">
+  <img src="./src/assets/images/screen/readme-2.jpg" width="30%" height="130px" alt="hero"/>
+  <img src="./src/assets/images/screen/readme-4.jpg" width="30%" height="130px" alt="cards"/>
+  <img src="./src/assets/images/screen/readme-3.jpg" width="30%" height="130px" alt="form"/>
+  <img src="./src/assets/images/screen/readme-5.jpg" width="30%" height="130px" alt="slider"/>
+  <img src="./src/assets/images/screen/readme-1.jpg" width="30%" height="130px" alt="subscription"/>
+  <img src="./src/assets/images/screen/readme.jpg" width="30%" height="130px" alt="mobile"/>
+</div>
 
-## 🚀 Запуск проєкту
+---
 
-```bash
-npm install
-npm run dev
-```
+## Learn & Explore
+
+The app includes a section with curated links to:
+
+- **Official documentation**
+
+  - React
+  - Redux
+  - Material UI
+  - Framer Motion and more
+
+- **AI tools and libraries**
+
+  - Useful for frontend and creative development
+
+  ***
+
+To get started with the project, clone the repository using
+`git clone https://github.com/username/slider-test.git`, then navigate into the
+project folder with `cd slider-test`. Install all dependencies by running
+`npm install`, and finally start the development server using `npm run dev`.
