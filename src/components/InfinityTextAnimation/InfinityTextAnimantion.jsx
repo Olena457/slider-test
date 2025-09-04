@@ -74,7 +74,8 @@ const InfinityTextAnimation = ({
             sx={{
               borderRadius: '16px',
               marginBottom: '2.2rem',
-              background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
+              background: `linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)`,
+
               border: '1px solid rgba(255, 255, 255, 0.3)',
               color: 'white',
               textAlign: 'center',
@@ -116,12 +117,12 @@ const InfinityTextAnimation = ({
                 className={css.cardButton}
                 onClick={handleOpen}
                 sx={{
-                  borderRadius: 3,
+                  borderRadius: '16px',
                   mt: 5,
-                  color: '#f5f5f5',
+                  color: '#fff',
                   backgroundColor: theme => theme.palette.primary.main,
                   '&:hover': {
-                    backgroundColor: theme => theme.palette.primary.dark,
+                    backgroundColor: theme => theme.palette.primary.main,
                     color: '#000',
                   },
                 }}
@@ -224,12 +225,12 @@ const InfinityTextAnimation = ({
             variant="contained"
             className={css.cardButton}
             sx={{
-              borderRadius: 3,
+              borderRadius: '16px',
               mt: 2,
               color: '#fff',
               backgroundColor: theme => theme.palette.primary.main,
               '&:hover': {
-                backgroundColor: theme => theme.palette.primary.dark,
+                backgroundColor: theme => theme.palette.primary.main,
                 color: '#000',
               },
             }}

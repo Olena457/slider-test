@@ -84,7 +84,7 @@ const ToolsComponet = () => {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   background:
-                    'linear-gradient(to right, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
+                    'linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
                   p: 2,
                   boxShadow: 3,
                   borderRadius: 2,
@@ -183,7 +183,7 @@ const ToolsComponet = () => {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   background:
-                    'linear-gradient(to right, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
+                    'linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
                   p: 2,
                   boxShadow: 3,
                   borderRadius: 2,

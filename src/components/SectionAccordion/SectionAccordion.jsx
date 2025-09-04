@@ -47,7 +47,8 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
-              backgroundColor: '#E6F7FF',
+              background:
+                'linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
             }}
           >
             <AccordionSummary
@@ -112,7 +113,8 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
-              backgroundColor: '#E6F7FF',
+              background:
+                'linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
             }}
           >
             <AccordionSummary
@@ -177,7 +179,8 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
-              backgroundColor: '#E6F7FF',
+              background:
+                'linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
             }}
           >
             <AccordionSummary
@@ -242,7 +245,8 @@ function SectionAccordion() {
               minWidth: { xs: 250 },
               maxWidth: { xs: '100%', sm: '100%' },
               mx: 'auto',
-              backgroundColor: '#E6F7FF',
+              background:
+                'linear-gradient(to left, #a0eaff, #80c8e0, #70d8f0, #50b0d0)',
             }}
           >
             <AccordionSummary
