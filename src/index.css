@@ -24,8 +24,8 @@ body {
   min-height: 100vh;
   font-style: normal;
   /* background: linear-gradient(to right, #a0eaff, #80c8e0, #70d8f0, #50b0d0); */
-  /* background: linear-gradient(to bottom, #4089ab, #2193b0);
-   */
+  background: linear-gradient(to bottom, #4089ab, #2193b0);
+
   background: linear-gradient(to right, #6dd5ed, #2193b0, #00b4db, #0083b0);
   /* background: linear-gradient(
     to right,

@@ -9,6 +9,7 @@ const ItemComponent = ({ item, onDeleteItem }) => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+
           background: `linear-gradient(135deg,  #F5F5F5, #f7f9fc)`,
           width: '100%',
         }}
